@@ -1,0 +1,110 @@
+{
+  "skyStriker:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "skyStriker:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL thedefault:Multiword_Keyword."
+  },
+  "skyStriker:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! thedefault:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! thedefault:Keywords."
+  },
+  "skyStriker:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "skyStriker:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "skyStriker:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X thedefault:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 thedefault:Keywords."
+  },
+  "skyStriker:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "skyStriker:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "skyStriker:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "skyStriker:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !skyStriker:ENERGY_DAMAGE! damage total.)"
+  },
+  "skyStriker:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !skyStriker:SecondMagic! poison to an enemy."
+  },
+  "skyStriker:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "skyStriker:AfterBurner": {
+    "NAME": "闪刀术式-烈火再燃",
+    "DESCRIPTION": "造成 !B! 点伤害"
+  },
+  "skyStriker:JammingWaves": {
+    "NAME": "闪刀术式-妨害波纹",
+    "DESCRIPTION": "获得 !B! 点格挡."
+  },
+  "skyStriker:WidowAnchor": {
+    "NAME": "闪刀机-寡妇锚",
+    "DESCRIPTION": "敌人 NL 失去 !M! 点力量。 NL 给予 !M! 层 NL [#ffff00]虚弱[]。"
+  },
+  "skyStriker:EagleBooster": {
+    "NAME": "闪刀机-鹰式推进器",
+    "DESCRIPTION": "获得 !M! 层人工制品。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层人工制品。 NL 获得1层[#ffff00]无实体[]。"
+  },
+  "skyStriker:Engage": {
+    "NAME": "闪刀起动-交闪",
+    "DESCRIPTION": "检索1带有闪刀的卡片",
+    "UPGRADE_DESCRIPTION": "检索1张[#00bfff]闪刀[]加入手牌 NL 抽1张牌。",
+    "EXTENDED_DESCRIPTION":["卡组中没有闪刀卡片"]
+  },
+  "skyStriker:HornetDrones": {
+    "NAME": "闪刀机-黄蜂子机",
+    "DESCRIPTION": "获得1闪刀Token",
+    "UPGRADE_DESCRIPTION": "获得1闪刀Token+。"
+  },
+  "skyStriker:Token": {
+    "NAME": "闪刀姬衍生物",
+    "DESCRIPTION": "无敌。虚无。消耗。",
+    "UPGRADE_DESCRIPTION": "无敌。消耗"
+  },
+  "skyStriker:VectorBlast": {
+    "NAME": "闪刀术式-爆风偏向",
+    "DESCRIPTION": "全体造成 !D! 点伤害"
+  },
+  "skyStriker:ScissorsCross": {
+    "NAME": "闪刀术式-剪斗交刃",
+    "DESCRIPTION": "随机造成 !D! 点伤害2次"
+  },
+  "skyStriker:SharkCannon": {
+    "NAME": "闪刀机-鲨式加农炮",
+    "DESCRIPTION": "全体造成 !D! 点伤害2次"
+  },
+  "skyStriker:PotOfGreed": {
+    "NAME": "强欲之壶",
+    "DESCRIPTION": "抽2张牌。 NL [#ffff00]消耗[]。",
+    "UPGRADE_DESCRIPTION": "抽2张牌。"
+  },
+  "skyStriker:GracefulCharity": {
+    "NAME": "天使的施舍",
+    "DESCRIPTION": "抽3张牌，舍弃2张牌。 NL [#ffff00]消耗[]。",
+    "UPGRADE_DESCRIPTION": "抽3张牌，舍弃2张牌。"
+  }
+
+
+}
