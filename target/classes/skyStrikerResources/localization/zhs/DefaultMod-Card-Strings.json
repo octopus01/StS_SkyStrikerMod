@@ -52,7 +52,7 @@
   },
   "skyStriker:AfterBurner": {
     "NAME": "闪刀术式-烈火再燃",
-    "DESCRIPTION": "造成 !B! 点伤害"
+    "DESCRIPTION": "造成 !D! 点伤害"
   },
   "skyStriker:JammingWaves": {
     "NAME": "闪刀术式-妨害波纹",
@@ -71,7 +71,7 @@
     "NAME": "闪刀起动-交闪",
     "DESCRIPTION": "检索1带有闪刀的卡片",
     "UPGRADE_DESCRIPTION": "检索1张[#00bfff]闪刀[]加入手牌 NL 抽1张牌。",
-    "EXTENDED_DESCRIPTION":["no"]
+    "EXTENDED_DESCRIPTION":["卡组中没有闪刀卡片"]
   },
   "skyStriker:HornetDrones": {
     "NAME": "闪刀机-黄蜂子机",
@@ -82,6 +82,11 @@
     "NAME": "闪刀姬衍生物",
     "DESCRIPTION": "无敌。虚无。消耗。",
     "UPGRADE_DESCRIPTION": "无敌。消耗"
+  },
+  "skyStriker:HerculesBase": {
+    "NAME": "闪刀机构-大力神基地",
+    "DESCRIPTION": "下一次攻击变成2次。",
+    "UPGRADE_DESCRIPTION": "下一次攻击变成2次。 NL 抽1。"
   },
   "skyStriker:VectorBlast": {
     "NAME": "闪刀术式-爆风偏向",

@@ -52,7 +52,7 @@
   },
   "skyStriker:AfterBurner": {
     "NAME": "闪刀术式-烈火再燃",
-    "DESCRIPTION": "造成 !B! 点伤害"
+    "DESCRIPTION": "造成 !D! 点伤害"
   },
   "skyStriker:JammingWaves": {
     "NAME": "闪刀术式-妨害波纹",
@@ -82,6 +82,11 @@
     "NAME": "闪刀姬衍生物",
     "DESCRIPTION": "无敌。虚无。消耗。",
     "UPGRADE_DESCRIPTION": "无敌。消耗"
+  },
+  "skyStriker:HerculesBase": {
+    "NAME": "闪刀机构-大力神基地",
+    "DESCRIPTION": "下一次攻击变成2次。",
+    "UPGRADE_DESCRIPTION": "下一次攻击变成2次。 NL 抽1。"
   },
   "skyStriker:VectorBlast": {
     "NAME": "闪刀术式-爆风偏向",

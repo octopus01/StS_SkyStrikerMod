@@ -7,6 +7,7 @@ skyStriker\patches\relics\BottledPlaceholderField$MakeStatEquivalentCopy.class
 skyStriker\cards\SkyStriker\WidowAnchor.class
 skyStriker\cards\SkyStriker\Engage.class
 skyStriker\patches\DefaultInsertPatch.class
+skyStriker\cards\SkyStriker\HerculesBase.class
 skyStriker\potions\PlaceholderPotion.class
 skyStriker\cards\SkyStriker\SharkCannon.class
 skyStriker\cards\OrbSkill.class
@@ -31,7 +32,10 @@ skyStriker\variables\DefaultSecondMagicNumber.class
 skyStriker\cards\CommonSpell\PotOfGreed.class
 skyStriker\relics\PlaceholderRelic.class
 skyStriker\relics\DefaultClickableRelic.class
+skyStriker\powers\SkyStriker\SubstitutePower.class
+skyStriker\powers\SkyStriker\DodgePower.class
 skyStriker\cards\SkyStrikerCardTags.class
+skyStriker\powers\SkyStriker\JammingWavesPower.class
 skyStriker\cards\DefaultSecondMagicNumberSkill.class
 skyStriker\DefaultMod$1.class
 skyStriker\relics\PlaceholderRelic2.class

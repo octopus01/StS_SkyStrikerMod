@@ -1,16 +1,20 @@
 package skyStriker.cards.SkyStriker;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FlameBarrierPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import skyStriker.DefaultMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
+import skyStriker.powers.SkyStriker.JammingWavesPower;
 
 import static skyStriker.DefaultMod.makeCardPath;
 
@@ -28,7 +32,7 @@ public class JammingWaves extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
 
@@ -54,9 +58,7 @@ public class JammingWaves extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         if(upgraded)
-            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-
+            this.addToBot(new ApplyPowerAction(p, p, new JammingWavesPower(p, 1),1));
     }
 
     //Upgraded stats.

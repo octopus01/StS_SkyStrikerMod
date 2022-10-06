@@ -11,6 +11,7 @@ import skyStriker.DefaultMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
+import skyStriker.powers.SkyStriker.SubstitutePower;
 
 import static skyStriker.DefaultMod.makeCardPath;
 
@@ -51,7 +52,7 @@ public class Token extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
+            this.addToBot(new ApplyPowerAction(p, p, new SubstitutePower(p, 1), 1));
     }
 
     //Upgraded stats.

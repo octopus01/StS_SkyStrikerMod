@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import skyStriker.DefaultMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
+import skyStriker.powers.SkyStriker.DodgePower;
 
 import static skyStriker.DefaultMod.makeCardPath;
 
@@ -53,7 +53,7 @@ public class EagleBooster extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.upgraded)
         {
-            this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
+            this.addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 1), 1));
         }
             this.addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
     }

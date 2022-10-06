@@ -40,7 +40,7 @@ public class WidowAnchor extends AbstractDynamicCard {
 
     public WidowAnchor() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(SkyStrikerCardTags.SkyStriker);
         this.tags.add(SkyStrikerCardTags.SpellCard);
