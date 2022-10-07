@@ -29,6 +29,7 @@ import skyStriker.cards.SkyStriker.*;
 import skyStriker.relics.DefaultClickableRelic;
 import skyStriker.relics.PlaceholderRelic;
 import skyStriker.relics.PlaceholderRelic2;
+import skyStriker.relics.SkyStriker.SkyStrikerDefaultRelic;
 
 import java.util.ArrayList;
 
@@ -205,15 +206,18 @@ public class TheSkyStriker extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
+//        retVal.add(PlaceholderRelic.ID);
+//        retVal.add(PlaceholderRelic2.ID);
+//        retVal.add(DefaultClickableRelic.ID);
+        retVal.add(SkyStrikerDefaultRelic.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+//        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
+//        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
+//        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        UnlockTracker.markRelicAsSeen(SkyStrikerDefaultRelic.ID);
+
 
         return retVal;
     }

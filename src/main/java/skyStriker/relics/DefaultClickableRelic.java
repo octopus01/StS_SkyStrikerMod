@@ -17,7 +17,7 @@ import skyStriker.util.TextureLoader;
 import static skyStriker.DefaultMod.makeRelicOutlinePath;
 import static skyStriker.DefaultMod.makeRelicPath;
 
-public class DefaultClickableRelic extends CustomRelic implements ClickableRelic { // You must implement things you want to use from StSlib
+public class  DefaultClickableRelic extends CustomRelic implements ClickableRelic { // You must implement things you want to use from StSlib
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      * StSLib for Clickable Relics

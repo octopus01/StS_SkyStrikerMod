@@ -30,6 +30,7 @@ import skyStriker.relics.BottledPlaceholderRelic;
 import skyStriker.relics.DefaultClickableRelic;
 import skyStriker.relics.PlaceholderRelic;
 import skyStriker.relics.PlaceholderRelic2;
+import skyStriker.relics.SkyStriker.SkyStrikerDefaultRelic;
 import skyStriker.util.IDCheckDontTouchPls;
 import skyStriker.util.TextureLoader;
 import skyStriker.variables.DefaultCustomVariable;
@@ -398,6 +399,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheSkyStriker.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new SkyStrikerDefaultRelic(), TheSkyStriker.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);

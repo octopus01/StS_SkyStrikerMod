@@ -3,6 +3,7 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\VectorBlast.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultCommonSkill.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\JammingWaves.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\relics\SkyStriker\SkyStrikerDefaultRelic.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\HornetDrones.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\characters\TheSkyStriker.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\variables\DefaultSecondMagicNumber.java
@@ -19,6 +20,7 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\SubstitutePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\AbstractDynamicCard.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\patches\relics\BottledPlaceholderField.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\JammingWavesPower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\TagFromDeckToHandAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\UncommonPowerAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\variables\DefaultCustomVariable.java
