@@ -50,6 +50,7 @@ public class VectorBlast extends CustomCard {
     public VectorBlast() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+
         this.tags.add(SkyStrikerCardTags.SkyStriker);
         this.tags.add(SkyStrikerCardTags.SpellCard);
         this.isMultiDamage = true;
@@ -58,6 +59,7 @@ public class VectorBlast extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         this.addToBot(new SFXAction("ATTACK_HEAVY"));
         this.addToBot(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
@@ -68,8 +70,11 @@ public class VectorBlast extends CustomCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+//            upgradeName();
+            baseDamage=15;
+            this.upgraded=true;
+            this.upgradedDamage = true;
+//            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

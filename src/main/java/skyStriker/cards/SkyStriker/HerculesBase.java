@@ -64,7 +64,8 @@ public class HerculesBase extends AbstractDynamicCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            upgradeName();
+//            upgradeName();
+            this.upgraded=true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

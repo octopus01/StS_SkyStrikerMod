@@ -46,19 +46,22 @@ public class ScissorsCross extends CustomCard {
     private static final int COST = 1;
     private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG =3;
-
+//    private static int i=1;
 
     public ScissorsCross() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+
         this.tags.add(SkyStrikerCardTags.SkyStriker);
         this.tags.add(SkyStrikerCardTags.SpellCard);
         this.isMultiDamage = true;
     }
 
+
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         for (int i = 0; i < 2; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
@@ -67,9 +70,21 @@ public class ScissorsCross extends CustomCard {
     // Upgraded stats.
     @Override
     public void upgrade() {
+
+
+//        String nameplus;
+//        if (i==1) nameplus=name+"+";
+//        else nameplus=name;
         if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+//            upgradeName();
+//                i=0;
+
+                baseDamage=11;
+                this.upgraded=true;
+//                this.name=nameplus;
+                this.upgradedDamage = true;
+                this.initializeTitle();
+//            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

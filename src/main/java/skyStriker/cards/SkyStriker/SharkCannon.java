@@ -50,6 +50,7 @@ public class SharkCannon extends CustomCard {
     public SharkCannon() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+
         this.tags.add(SkyStrikerCardTags.SkyStriker);
         this.tags.add(SkyStrikerCardTags.SpellCard);
         this.isMultiDamage = true;
@@ -58,6 +59,7 @@ public class SharkCannon extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         for(int i=0;i<2;i++) {
             this.addToBot(new SFXAction("ATTACK_HEAVY"));
             this.addToBot(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
@@ -71,8 +73,19 @@ public class SharkCannon extends CustomCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgraded = true;
+                baseDamage=12;
+                this.upgradedDamage = true;
+//            upgradeDamage(UPGRADE_PLUS_DMG);
+            initializeDescription();
+        }
+    }
+    public void downgrade(){
+        if(upgraded){
+            upgraded=false;
+//            baseDamage=8;
+            this.name.replace("+","");
+            this.initializeTitle();
             initializeDescription();
         }
     }

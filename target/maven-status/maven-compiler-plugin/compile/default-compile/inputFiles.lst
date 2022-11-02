@@ -16,11 +16,13 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\events\IdentityCrisisEvent.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultAttackWithVariable.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\relics\BottledPlaceholderRelic.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\SkyStrikerDowngradeAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultRareSkill.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\SubstitutePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\AbstractDynamicCard.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\patches\relics\BottledPlaceholderField.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\JammingWavesPower.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\SkyStrikerUpgradePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\TagFromDeckToHandAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\UncommonPowerAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\variables\DefaultCustomVariable.java
@@ -42,6 +44,7 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultRareAttack.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\DefaultMod.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\EagleBooster.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\SkyStrikerUpgradeAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultUncommonPower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\OrbSkill.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\orbs\DefaultOrb.java

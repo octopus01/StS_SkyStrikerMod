@@ -42,7 +42,7 @@ public class JammingWaves extends AbstractDynamicCard {
 
 
     // /STAT DECLARATION/
-
+  
     public JammingWaves() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
@@ -58,15 +58,20 @@ public class JammingWaves extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         if(upgraded)
+        {
             this.addToBot(new ApplyPowerAction(p, p, new JammingWavesPower(p, 1),1));
+        }
     }
 
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
-            upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+//            upgradeName();
+            this.upgraded=true;
+            baseBlock=8;
+            upgradedBlock=true;
+//            upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
     }

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import skyStriker.cards.SkyStrikerCardTags;
-
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import java.util.Iterator;
 
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
@@ -39,6 +39,8 @@ public class SkyStrikerDowngradeAction extends AbstractGameAction {
             AbstractCard c = (AbstractCard)var2.next();
             if (c.upgraded&&c.hasTag(SkyStriker)&&c.hasTag(SpellCard)) {
                 c.upgraded=false;
+                c.name.replace("+","");
+//                this.initializeTitle();
             }
         }
     }

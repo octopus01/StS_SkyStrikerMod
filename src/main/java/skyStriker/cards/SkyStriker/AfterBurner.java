@@ -71,7 +71,8 @@ public class AfterBurner extends CustomCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            upgradeName();
+//            upgradeName();
+            this.upgraded=true;
             initializeDescription();
         }
     }

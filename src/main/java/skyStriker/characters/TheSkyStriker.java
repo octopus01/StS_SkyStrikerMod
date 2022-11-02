@@ -182,6 +182,7 @@ public class TheSkyStriker extends CustomPlayer {
         retVal.add(ScissorsCross.ID);
         retVal.add(SharkCannon.ID);
         retVal.add(HerculesBase.ID);
+        retVal.add(Kagari.ID);
 
 
 //        retVal.add("SecretTechnique");
