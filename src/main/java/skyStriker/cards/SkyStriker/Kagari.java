@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.AbstractStance;
 import skyStriker.actions.TagFromDiscardPileToHandAction;
 import skyStriker.stances.KagariStance;
 
@@ -26,14 +27,14 @@ public class Kagari extends AbstractCard {
     private static final CardStrings cardStrings;
 
     public Kagari() {
-        super(ID, cardStrings.NAME, "purple/attack/eruption", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, cardStrings.NAME, "", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.BASIC, CardTarget.SELF);
         this.baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
         this.addToBot(new TagFromDiscardPileToHandAction(1,SkyStriker));
-//        this.addToBot(new ChangeStanceAction("Kagari"));
+        this.addToBot(new ChangeStanceAction(new KagariStance()));
     }
 
 
@@ -46,7 +47,7 @@ public class Kagari extends AbstractCard {
     }
 
     public AbstractCard makeCopy() {
-        return new com.megacrit.cardcrawl.cards.purple.Eruption();
+        return new Kagari();
     }
 
     static {
