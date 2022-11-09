@@ -12,6 +12,7 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\va
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\CommonSpell\PotOfGreed.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultUncommonAttack.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\WidowAnchor.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\Shizuku.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\relics\PlaceholderRelic.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultCommonAttack.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStrikerCardTags.java
@@ -25,6 +26,7 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\patches\relics\BottledPlaceholderField.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\Kagari.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\JammingWavesPower.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\stances\ShizukuStance.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\SkyStrikerUpgradePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\TagFromDeckToHandAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\UncommonPowerAction.java

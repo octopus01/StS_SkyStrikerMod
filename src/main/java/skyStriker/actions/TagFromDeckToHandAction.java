@@ -72,6 +72,7 @@ public class TagFromDeckToHandAction extends AbstractGameAction {
 
                 while(var1.hasNext()) {
                     card = (AbstractCard)var1.next();
+                    if(card.hasTag(cardTags)){
                     card.unhover();
                     if (this.p.hand.size() == 10) {
                         this.p.drawPile.moveToDiscardPile(card);
@@ -83,6 +84,7 @@ public class TagFromDeckToHandAction extends AbstractGameAction {
 
                     this.p.hand.refreshHandLayout();
                     this.p.hand.applyPowers();
+                   }
                 }
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
