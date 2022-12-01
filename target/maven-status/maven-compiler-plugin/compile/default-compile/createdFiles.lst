@@ -24,6 +24,7 @@ skyStriker\relics\DefaultClickableRelic.class
 skyStriker\powers\SkyStriker\SubstitutePower.class
 skyStriker\cards\SkyStrikerCardTags.class
 skyStriker\powers\SkyStriker\JammingWavesPower.class
+skyStriker\cards\SkyStriker\Kaina.class
 skyStriker\cards\CardTemplate.class
 skyStriker\relics\BottledPlaceholderRelic.class
 skyStriker\cards\DefaultCommonPower.class
@@ -43,6 +44,7 @@ skyStriker\cards\AbstractDefaultCard.class
 skyStriker\powers\RarePower.class
 skyStriker\cards\DefaultUncommonSkill.class
 skyStriker\cards\SkyStriker\Token.class
+skyStriker\powers\SkyStriker\KainaPower.class
 skyStriker\actions\TagFromDeckToHandAction.class
 skyStriker\patches\DefaultInsertPatch$Locator.class
 skyStriker\variables\DefaultSecondMagicNumber.class
@@ -57,6 +59,7 @@ skyStriker\cards\SkyStriker\Shizuku.class
 skyStriker\DefaultMod.class
 skyStriker\powers\SkyStriker\SkyStrikerUpgradePower.class
 skyStriker\cards\DefaultRareSkill.class
+skyStriker\stances\KainaStance.class
 skyStriker\util\IDCheckDontTouchPls.class
 skyStriker\actions\UncommonPowerAction.class
 skyStriker\characters\TheSkyStriker.class

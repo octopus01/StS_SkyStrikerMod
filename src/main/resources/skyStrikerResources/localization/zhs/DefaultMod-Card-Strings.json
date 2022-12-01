@@ -65,12 +65,12 @@
   "skyStriker:EagleBooster": {
     "NAME": "闪刀机-鹰式推进器",
     "DESCRIPTION": "获得 !M! 层人工制品。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层人工制品。 NL 获得1层[#ffff00]无实体[]。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 层人工制品。 NL 获得1层无实体。"
   },
   "skyStriker:Engage": {
     "NAME": "闪刀起动-交闪",
     "DESCRIPTION": "检索1带有闪刀的卡片",
-    "UPGRADE_DESCRIPTION": "检索1张[#00bfff]闪刀[]加入手牌 NL 抽1张牌。",
+    "UPGRADE_DESCRIPTION": "检索1张闪刀加入手牌 NL 抽1张牌。",
     "EXTENDED_DESCRIPTION":["卡组中没有闪刀卡片"]
   },
   "skyStriker:HornetDrones": {
@@ -109,6 +109,18 @@
     "NAME": "天使的施舍",
     "DESCRIPTION": "抽3张牌，舍弃2张牌。 NL [#ffff00]消耗[]。",
     "UPGRADE_DESCRIPTION": "抽3张牌，舍弃2张牌。"
+  },
+  "skyStriker:Kaina": {
+    "NAME": "闪刀姬-魁奈",
+    "DESCRIPTION": "变地闪"
+  },
+  "skyStriker:Kagari": {
+    "NAME": "闪刀姬-燎里",
+    "DESCRIPTION": "变火闪"
+  },
+  "skyStriker:Shizuku": {
+    "NAME": "闪刀姬-雫空",
+    "DESCRIPTION": "变水闪等死"
   }
 
 

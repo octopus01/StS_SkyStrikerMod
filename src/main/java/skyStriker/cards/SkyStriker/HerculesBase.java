@@ -37,7 +37,6 @@ public class HerculesBase extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
-    private static Integer magicNumber=1;
 
     private static final int COST = 1;
 
@@ -56,7 +55,7 @@ public class HerculesBase extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new DoubleTapPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new DoubleTapPower(p, 1), 1));
         if(upgraded) this.addToBot(new DrawCardAction(p, 1));
 
     }

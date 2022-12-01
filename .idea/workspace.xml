@@ -4,7 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0bd0d5b-3718-4476-9274-df5b2de13b64" name="变更" comment="Sky Striker 0.0.5&#10;add shizuku&#10;fix Kagari" />
+    <list default="true" id="c0bd0d5b-3718-4476-9274-df5b2de13b64" name="变更" comment="Sky Striker 0.0.5&#10;add shizuku&#10;fix Kagari">
+      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Kaina.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/powers/SkyStriker/KainaPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/stances/KainaStance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kagari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kagari_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kaina.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kaina_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Shizuku.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Shizuku_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Skill_p-assets/Skill_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/Earth32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/Earth84.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/Fire32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/Fire84.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/Water32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/Water84.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/eng/DefaultMod-Stance-Strings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Stance-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/DefaultMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/DefaultMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/actions/SkyStrikerDowngradeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/actions/SkyStrikerDowngradeAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/HerculesBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/HerculesBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Kagari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Kagari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Shizuku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Shizuku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/characters/TheSkyStriker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/characters/TheSkyStriker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/powers/SkyStriker/ShizukuPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/powers/SkyStriker/ShizukuPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/stances/KagariStance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/stances/KagariStance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/stances/ShizukuStance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/stances/ShizukuStance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Skill_p.psd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Skill_p.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Relic-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Relic-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/DefaultMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/DefaultMod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/HerculesBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/HerculesBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Kagari.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Kagari.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Shizuku.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Shizuku.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/characters/TheSkyStriker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/characters/TheSkyStriker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/powers/SkyStriker/ShizukuPower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/powers/SkyStriker/ShizukuPower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/stances/KagariStance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/stances/KagariStance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/stances/ShizukuStance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/stances/ShizukuStance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Skill_p.psd" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Skill_p.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Relic-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Relic-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/skyStriker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/skyStriker.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,23 +85,27 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2FdNS2lo3CYdCGKVYLpoS9kxRIS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/slaythespire/StS-DefaultModBase-master/theDefault&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/slaythespire/StS-DefaultModBase-master/theDefault/src/main/resources/skyStrikerResources/localization/eng",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\resources\skyStrikerResources\localization\eng" />
       <recent name="D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\resources\skyStrikerResources\images\charSelect" />
       <recent name="D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\resources\skyStrikerResources\localization\zhs" />
       <recent name="D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\resources\skyStrikerResources\localization.zhs" />
@@ -157,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668006870713</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Sky Striker 0.0.5&#10;add shizuku&#10;fix Kagari">
+      <created>1668007108833</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668007108833</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +246,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Sky Striker 0.0.1" />
     <MESSAGE value="Sky Striker 0.0.2" />
     <MESSAGE value="Sky Striker 0.0.3" />

@@ -486,6 +486,7 @@ public class DefaultMod implements
         BaseMod.loadCustomStringsFile(CharacterStrings.class, makeLocPath(language, "DefaultMod-Character-Strings"));
         BaseMod.loadCustomStringsFile(OrbStrings.class, makeLocPath(language, "DefaultMod-Orb-Strings"));
         BaseMod.loadCustomStringsFile(PotionStrings.class, makeLocPath(language, "DefaultMod-Potion-Strings"));
+        BaseMod.loadCustomStringsFile(StanceStrings.class,makeLocPath(language,"DefaultMod-Stance-Strings"));
     }
     @Override
     public void receiveEditStrings() {

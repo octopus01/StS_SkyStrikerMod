@@ -20,19 +20,20 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import com.megacrit.cardcrawl.vfx.stance.WrathParticleEffect;
+import skyStriker.DefaultMod;
+import skyStriker.cards.SkyStriker.Kaina;
 
 import java.util.Iterator;
 
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
-
 public class KagariStance extends AbstractStance {
-    public static final String STANCE_ID = "Wrath";
+    public static final String STANCE_ID =  DefaultMod.makeID(KagariStance.class.getSimpleName());
     private static final StanceStrings stanceString;
     private static long sfxId;
 
     public KagariStance() {
-        this.ID = "Kagari";
+        this.ID = STANCE_ID;
         this.name = stanceString.NAME;
         this.updateDescription();
     }
@@ -48,12 +49,7 @@ public class KagariStance extends AbstractStance {
        }
        return type == DamageType.NORMAL ? damage + i : damage;
    }
-//        return type == DamageType.NORMAL ? damage * 2.0F : damage;
-//    }
-//
-//    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-//        return type == DamageType.NORMAL ? damage * 2.0F : damage;
-//    }
+
 
     public void updateAnimation() {
         if (!Settings.DISABLE_EFFECTS) {
@@ -100,7 +96,7 @@ public class KagariStance extends AbstractStance {
     }
 
     static {
-        stanceString = CardCrawlGame.languagePack.getStanceString("Wrath");
+        stanceString = CardCrawlGame.languagePack.getStanceString(STANCE_ID);
         sfxId = -1L;
     }
 }

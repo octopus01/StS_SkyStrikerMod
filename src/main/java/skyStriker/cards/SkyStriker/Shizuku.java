@@ -6,6 +6,7 @@ package skyStriker.cards.SkyStriker;
 //
 
 
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -19,19 +20,22 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RetainCardPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
+import skyStriker.DefaultMod;
 import skyStriker.actions.TagFromDiscardPileToHandAction;
+import skyStriker.characters.TheSkyStriker;
 import skyStriker.powers.SkyStriker.ShizukuPower;
 import skyStriker.stances.ShizukuStance;
 
+import static skyStriker.DefaultMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 
-public class Shizuku extends AbstractCard {
-    public static final String ID = "Shizuku";
+public class Shizuku extends CustomCard {
+    public static final String ID = DefaultMod.makeID(Shizuku.class.getSimpleName());
     private static final CardStrings cardStrings;
+    public static final String IMG = makeCardPath("Shizuku.png");
 
     public Shizuku() {
-        super(ID, cardStrings.NAME, "", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.BASIC, CardTarget.SELF);
-        this.baseDamage = 9;
+        super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.SKILL,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.BASIC, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -55,7 +59,7 @@ public class Shizuku extends AbstractCard {
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Vigilance");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 }
 

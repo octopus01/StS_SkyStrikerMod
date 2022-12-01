@@ -40,7 +40,7 @@ public class SkyStrikerDowngradeAction extends AbstractGameAction {
             if (c.upgraded&&c.hasTag(SkyStriker)&&c.hasTag(SpellCard)) {
                 c.upgraded=false;
                 c.name.replace("+","");
-//                this.initializeTitle();
+//                this.initializeTitle(); how to change title?
             }
         }
     }

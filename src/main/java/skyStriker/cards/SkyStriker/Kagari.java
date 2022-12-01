@@ -6,6 +6,7 @@ package skyStriker.cards.SkyStriker;
 //
 
 
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -17,18 +18,21 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.AbstractStance;
+import skyStriker.DefaultMod;
 import skyStriker.actions.TagFromDiscardPileToHandAction;
+import skyStriker.characters.TheSkyStriker;
 import skyStriker.stances.KagariStance;
 
+import static skyStriker.DefaultMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 
-public class Kagari extends AbstractCard {
-    public static final String ID = "Kagari";
+public class Kagari extends CustomCard {
+    public static final String ID = DefaultMod.makeID(Kagari.class.getSimpleName());
     private static final CardStrings cardStrings;
+    public static final String IMG = makeCardPath("Kagari.png");
 
     public Kagari() {
-        super(ID, cardStrings.NAME, "", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.BASIC, CardTarget.SELF);
-        this.baseDamage = 9;
+        super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.SKILL,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.BASIC, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,7 +55,7 @@ public class Kagari extends AbstractCard {
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Eruption");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 }
 

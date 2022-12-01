@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -19,6 +20,9 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.stance.CalmParticleEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import skyStriker.DefaultMod;
+import skyStriker.powers.SkyStriker.KainaPower;
+import skyStriker.powers.SkyStriker.ShizukuPower;
 
 import java.util.Iterator;
 
@@ -26,12 +30,12 @@ import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
 
 public class ShizukuStance extends AbstractStance {
-    public static final String STANCE_ID = "Calm";
+    public static final String STANCE_ID = DefaultMod.makeID(ShizukuStance.class.getSimpleName());;
     private static final StanceStrings stanceString;
     private static long sfxId;
 
     public ShizukuStance() {
-        this.ID = "Shizuku";
+        this.ID = STANCE_ID;
         this.name = stanceString.NAME;
         this.updateDescription();
     }
@@ -78,6 +82,8 @@ public class ShizukuStance extends AbstractStance {
         return type == DamageInfo.DamageType.NORMAL ? damage - i : damage;
     }
     public void onExitStance() {
+        AbstractDungeon.actionManager.addToBottom(
+                new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ShizukuPower.POWER_ID));
         this.stopIdleSfx();
     }
 
@@ -90,7 +96,7 @@ public class ShizukuStance extends AbstractStance {
     }
 
     static {
-        stanceString = CardCrawlGame.languagePack.getStanceString("Calm");
+        stanceString = CardCrawlGame.languagePack.getStanceString(STANCE_ID);
         sfxId = -1L;
     }
 }

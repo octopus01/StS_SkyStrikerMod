@@ -18,7 +18,7 @@
   "skyStriker:DodgePower": {
     "NAME": "闪避",
     "DESCRIPTIONS": [
-      "无敌"
+      "闪避1回合"
     ]
   },
   "skyStriker:SubstitutePower": {
@@ -31,6 +31,24 @@
     "NAME": "妨碍波纹",
     "DESCRIPTIONS": [
       "反射3点伤害"
+    ]
+  },
+  "skyStriker:KagariPower": {
+    "NAME": "火闪2效",
+    "DESCRIPTIONS": [
+      "攻击力上升自己墓地的魔法卡数量×1。"
+    ]
+  },
+  "skyStriker:ShizukuPower": {
+    "NAME": "水闪1效",
+    "DESCRIPTIONS": [
+      "回合的结束阶段才能发动。从卡组把一张「闪刀」魔法卡加入手卡。"
+    ]
+  },
+  "skyStriker:KainaPower": {
+    "NAME": "地闪2效",
+    "DESCRIPTIONS": [
+      "每次自己把「闪刀」魔法卡的效果发动，自己回复1基本分。"
     ]
   }
 }

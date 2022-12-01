@@ -35,7 +35,7 @@
     "NAME": "初始遗物",
     "FLAVOR": "What is this.",
     "DESCRIPTIONS": [
-      "Upgrade."
+      "弃牌堆魔法卡>=3时，升级闪刀卡片"
     ]
   }
 }
