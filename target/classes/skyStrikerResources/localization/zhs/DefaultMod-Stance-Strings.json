@@ -1,0 +1,14 @@
+{
+  "skyStriker:KagariStance": {
+    "NAME": "闪刀姬-燎里",
+    "DESCRIPTION": ["攻击力上升墓地魔法卡数量x1"]
+  },
+  "skyStriker:ShizukuStance": {
+    "NAME": "闪刀姬-雫空",
+    "DESCRIPTION": ["对方怪兽攻击力下降墓地魔法卡数量x1"]
+  },
+  "skyStriker:KainaStance": {
+    "NAME": "闪刀姬-魁奈",
+    "DESCRIPTION": ["每次闪刀魔法发动，恢复1点生命"]
+  }
+}
