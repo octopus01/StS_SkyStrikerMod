@@ -1,5 +1,6 @@
 package skyStriker.potions;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +13,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.abstracts.CustomPotion;
-
 public class PlaceholderPotion extends CustomPotion {
 
     public static final String POTION_ID = skyStriker.DefaultMod.makeID("PlaceholderPotion");

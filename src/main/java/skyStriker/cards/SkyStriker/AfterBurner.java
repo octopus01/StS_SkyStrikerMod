@@ -13,6 +13,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import skyStriker.DefaultMod;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
+import skyStriker.stances.HayateStance;
+
+import java.util.Objects;
 
 import static skyStriker.DefaultMod.makeCardPath;
 public class AfterBurner extends CustomCard {
@@ -46,21 +49,22 @@ public class AfterBurner extends CustomCard {
     public AfterBurner() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseBlock = 3;
+        baseBlock = 4;
         this.tags.add(CardTags.STARTER_STRIKE); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
         this.tags.add(CardTags.STRIKE);
         this.tags.add(SkyStrikerCardTags.SkyStriker);
         this.tags.add(SkyStrikerCardTags.SpellCard);
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if(Objects.equals(p.stance.ID, HayateStance.STANCE_ID)) damageTypeForTurn= DamageInfo.DamageType.HP_LOSS;
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new WaitAction(0.1F));
-        if(upgraded)
-        this.addToBot(new GainBlockAction(p, p, this.block));
+        if(upgraded) this.addToBot(new GainBlockAction(p, p, this.block));
 //        if (p != null && m != null) {
 //            this.addToBot(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
 //        }

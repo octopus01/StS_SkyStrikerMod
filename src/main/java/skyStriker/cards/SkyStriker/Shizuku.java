@@ -36,10 +36,12 @@ public class Shizuku extends CustomCard {
 
     public Shizuku() {
         super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.SKILL,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.BASIC, CardTarget.SELF);
+        this.exhaust = true;
+        this.tags.add(SkyStriker);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
+//        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
 //        this.addToBot(new TagFromDiscardPileToHandAction(1,SkyStriker));
         this.addToBot(new ApplyPowerAction(p, p, new ShizukuPower(p, 1), 1));
         this.addToBot(new ChangeStanceAction(new ShizukuStance()));

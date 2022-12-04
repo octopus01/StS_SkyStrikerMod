@@ -50,5 +50,23 @@
     "DESCRIPTIONS": [
       "每次自己把「闪刀」魔法卡的效果发动，自己回复1基本分。"
     ]
+  },
+  "skyStriker:MultiRolePower": {
+    "NAME":"多任务战机",
+    "DESCRIPTIONS": [
+      "多任务战机。"
+    ]
+  },
+  "skyStriker:AreaZeroPower": {
+    "NAME":"闪刀空域-零区",
+    "DESCRIPTIONS": [
+      "抽牌后从自己卡组上面把3张卡翻开。可以从那之中选1张「闪刀」卡加入手卡"
+    ]
+  },
+  "skyStriker:HayatePower": {
+    "NAME":"闪刀姬-飒天",
+    "DESCRIPTIONS": [
+      "这张卡进行战斗的伤害计算后才能发动。从卡组把1张「闪刀」卡送去墓地。"
+    ]
   }
 }

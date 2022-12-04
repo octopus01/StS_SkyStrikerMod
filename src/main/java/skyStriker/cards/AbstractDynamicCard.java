@@ -1,5 +1,7 @@
 package skyStriker.cards;
 
+import basemod.AutoAdd;
+
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
 public abstract class AbstractDynamicCard extends AbstractDefaultCard {

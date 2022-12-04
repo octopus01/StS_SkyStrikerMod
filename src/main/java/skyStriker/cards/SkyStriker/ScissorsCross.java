@@ -20,6 +20,9 @@ import com.megacrit.cardcrawl.vfx.combat.SweepingBeamEffect;
 import skyStriker.DefaultMod;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
+import skyStriker.stances.HayateStance;
+
+import java.util.Objects;
 
 import static skyStriker.DefaultMod.makeCardPath;
 public class ScissorsCross extends CustomCard {
@@ -61,7 +64,7 @@ public class ScissorsCross extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        if(Objects.equals(p.stance.ID, HayateStance.STANCE_ID)) damageTypeForTurn= DamageInfo.DamageType.HP_LOSS;
         for (int i = 0; i < 2; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }

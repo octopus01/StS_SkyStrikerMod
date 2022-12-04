@@ -32,8 +32,8 @@ public class JammingWavesPower extends AbstractPower implements CloneablePowerIn
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("JammingWaves84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("JammingWaves32.png"));
 
     public JammingWavesPower( AbstractCreature owner, int times) {
         name = NAME;
@@ -58,9 +58,9 @@ public int onAttacked(DamageInfo info, int damageAmount) {
         this.flash();
         this.addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SHIELD));
         if (this.amount == 0) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         } else {
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, this.POWER_ID, 1));
+            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
         }
     }
 

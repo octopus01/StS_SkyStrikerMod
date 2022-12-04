@@ -36,8 +36,8 @@ public class SkyStrikerDefaultRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = DefaultMod.makeID("SkyStrikerDefaultRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SkyStriker_relic.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SkyStriker_relic.png"));
     int  upgraded=0;
 
     public SkyStrikerDefaultRelic() {

@@ -44,7 +44,7 @@ public class TagFromDeckToHandAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (tmp.size() == 1) {
                 card = tmp.getTopCard();
-                if (this.p.hand.size() == 10) {
+                if (this.p.hand.size() >= 10) {
                     this.p.drawPile.moveToDiscardPile(card);
                     this.p.createHandIsFullDialog();
                 } else {
@@ -96,7 +96,7 @@ public class TagFromDeckToHandAction extends AbstractGameAction {
     }
 
     static {
-      uiStrings = CardCrawlGame.languagePack.getUIString("SkillFromDeckToHandAction");
+      uiStrings = CardCrawlGame.languagePack.getUIString("BetterToHandAction");
       TEXT = uiStrings.TEXT;
     }
 }

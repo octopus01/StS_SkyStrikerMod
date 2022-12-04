@@ -1,5 +1,6 @@
 package skyStriker.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -12,7 +13,7 @@ import skyStriker.DefaultMod;
 import skyStriker.characters.TheSkyStriker;
 
 import static skyStriker.DefaultMod.makeCardPath;
-
+@AutoAdd.Ignore
 public class DefaultRareAttack extends AbstractDynamicCard {
 
     /*

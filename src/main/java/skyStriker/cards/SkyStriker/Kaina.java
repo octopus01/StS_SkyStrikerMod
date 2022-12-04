@@ -33,6 +33,8 @@ public class Kaina extends CustomCard {
     }
     public Kaina() {
         super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.SKILL,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.BASIC, CardTarget.ENEMY);
+        this.exhaust = true;
+        this.tags.add(SkyStriker);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

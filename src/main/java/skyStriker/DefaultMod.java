@@ -91,8 +91,8 @@ public class DefaultMod implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Sky Striker Mod";
-    private static final String AUTHOR = "Gremious"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String AUTHOR = "Takoyaki"; // And pretty soon - You!
+    private static final String DESCRIPTION = "A mod based on a yu-gi-oh archetype sky striker";
     
     // =============== INPUT TEXTURE LOCATION =================
     
@@ -292,7 +292,7 @@ public class DefaultMod implements
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheSkyStriker.Enums.THE_DEFAULT.toString());
         
-        BaseMod.addCharacter(new TheSkyStriker("the Default", TheSkyStriker.Enums.THE_DEFAULT),
+        BaseMod.addCharacter(new TheSkyStriker("sky striker raye", TheSkyStriker.Enums.THE_DEFAULT),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheSkyStriker.Enums.THE_DEFAULT);
         
         receiveEditPotions();
@@ -487,6 +487,7 @@ public class DefaultMod implements
         BaseMod.loadCustomStringsFile(OrbStrings.class, makeLocPath(language, "DefaultMod-Orb-Strings"));
         BaseMod.loadCustomStringsFile(PotionStrings.class, makeLocPath(language, "DefaultMod-Potion-Strings"));
         BaseMod.loadCustomStringsFile(StanceStrings.class,makeLocPath(language,"DefaultMod-Stance-Strings"));
+        BaseMod.loadCustomStringsFile(UIStrings.class,makeLocPath(language,"DefaultMod-UI-Strings"));
     }
     @Override
     public void receiveEditStrings() {

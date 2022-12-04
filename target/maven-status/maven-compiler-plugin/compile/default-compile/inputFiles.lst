@@ -1,4 +1,5 @@
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\Engage.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\MultiRole.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\HerculesBase.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\VectorBlast.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\stances\KagariStance.java
@@ -13,7 +14,9 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\va
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\CommonSpell\PotOfGreed.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultUncommonAttack.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\WidowAnchor.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\HayatePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\Shizuku.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\stances\HayateStance.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\relics\PlaceholderRelic.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultCommonAttack.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\stances\KainaStance.java
@@ -23,6 +26,7 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\relics\BottledPlaceholderRelic.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\SkyStrikerDowngradeAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultRareSkill.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\Hayate.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\SubstitutePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\AbstractDynamicCard.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\patches\relics\BottledPlaceholderField.java
@@ -30,8 +34,10 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\JammingWavesPower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\stances\ShizukuStance.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\SkyStrikerUpgradePower.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\MultiRoleAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\TagFromDeckToHandAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\UncommonPowerAction.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\AreaZero.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\variables\DefaultCustomVariable.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\DodgePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\CardTemplate.java
@@ -40,17 +46,21 @@ D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\ca
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\patches\DefaultInsertPatch.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\CommonSpell\GracefulCharity.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultUncommonSkill.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\DeckToDiscardPileAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\KainaPower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\SharkCannon.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\Token.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\AfterBurner.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\ScissorsCross.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\CheckDeckTopAndAddAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\potions\PlaceholderPotion.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\util\TextureLoader.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\MultiRolePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\RarePower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultCommonPower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultRareAttack.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\DefaultMod.java
+D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\powers\SkyStriker\AreaZeroPower.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\SkyStriker\EagleBooster.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\actions\SkyStrikerUpgradeAction.java
 D:\slaythespire\StS-DefaultModBase-master\theDefault\src\main\java\skyStriker\cards\DefaultUncommonPower.java

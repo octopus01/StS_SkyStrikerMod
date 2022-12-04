@@ -112,16 +112,26 @@
   },
   "skyStriker:Kaina": {
     "NAME": "闪刀姬-魁奈",
-    "DESCRIPTION": "变地闪"
+    "DESCRIPTION": "对方场上1只怪兽直到对方回合结束时不能攻击。变身地闪"
   },
   "skyStriker:Kagari": {
     "NAME": "闪刀姬-燎里",
-    "DESCRIPTION": "变火闪"
+    "DESCRIPTION": "将墓地1张「闪刀」魔法卡加入手卡。变身火闪"
   },
   "skyStriker:Shizuku": {
     "NAME": "闪刀姬-雫空",
-    "DESCRIPTION": "变水闪等死"
+    "DESCRIPTION": "对方的攻击力下降墓地魔法卡数量×1。变身水闪"
+  },
+  "skyStriker:MultiRole": {
+    "NAME": "闪刀机关-多任务战机",
+    "DESCRIPTION": "结束阶段选最多自己发动的「闪刀」魔法卡数量墓地的「闪刀」魔法卡加入手牌。加入的手牌使用时消耗"
+  },
+  "skyStriker:AreaZero": {
+    "NAME": "闪刀空域-零区",
+    "DESCRIPTION": "抽牌后，从自己卡组上面把3张卡翻开。从那之中选1张「闪刀」卡加入手卡。"
+  },
+  "skyStriker:Hayate": {
+    "NAME": "闪刀姬-飒天",
+    "DESCRIPTION": "可以直接攻击。战斗后发动，从卡组把1张「闪刀」卡送去墓地。变身风闪"
   }
-
-
 }

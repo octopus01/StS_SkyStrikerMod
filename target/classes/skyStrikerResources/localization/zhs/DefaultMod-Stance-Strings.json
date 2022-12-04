@@ -10,5 +10,9 @@
   "skyStriker:KainaStance": {
     "NAME": "闪刀姬-魁奈",
     "DESCRIPTION": ["每次闪刀魔法发动，恢复1点生命"]
+  },
+  "skyStriker:HayateStance": {
+    "NAME": "闪刀姬-飒天",
+    "DESCRIPTION": ["可以直接攻击"]
   }
 }

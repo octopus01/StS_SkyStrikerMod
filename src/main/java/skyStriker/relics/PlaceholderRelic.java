@@ -1,5 +1,6 @@
 package skyStriker.relics;
 
+import basemod.AutoAdd;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,7 +9,7 @@ import skyStriker.util.TextureLoader;
 
 import static skyStriker.DefaultMod.makeRelicOutlinePath;
 import static skyStriker.DefaultMod.makeRelicPath;
-
+@AutoAdd.Ignore
 public class PlaceholderRelic extends CustomRelic {
 
     /*

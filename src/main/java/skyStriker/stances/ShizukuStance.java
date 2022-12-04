@@ -65,7 +65,6 @@ public class ShizukuStance extends AbstractStance {
         if (sfxId != -1L) {
             this.stopIdleSfx();
         }
-
         CardCrawlGame.sound.play("STANCE_ENTER_CALM");
         sfxId = CardCrawlGame.sound.playAndLoop("STANCE_LOOP_CALM");
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.SKY, true));

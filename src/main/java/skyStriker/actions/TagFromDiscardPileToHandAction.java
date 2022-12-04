@@ -51,6 +51,7 @@ public class TagFromDiscardPileToHandAction extends AbstractGameAction {
 
     public void update() {
         AbstractCard card;
+        if(numberOfCards==0) isDone=true;
         if (this.duration == Settings.ACTION_DUR_MED) {
             CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             Iterator var5 = this.p.discardPile.group.iterator();

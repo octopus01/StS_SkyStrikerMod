@@ -98,7 +98,7 @@ public class TagFromDeckToHandRetainAction extends AbstractGameAction {
     }
 
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("SkillFromDeckToHandAction");
+        uiStrings = CardCrawlGame.languagePack.getUIString("BetterToHandAction");
         TEXT = uiStrings.TEXT;
     }
 }

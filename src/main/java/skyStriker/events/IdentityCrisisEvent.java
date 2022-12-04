@@ -1,5 +1,6 @@
 package skyStriker.events;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.colorless.Apotheosis;
@@ -16,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import skyStriker.DefaultMod;
 
 import static skyStriker.DefaultMod.makeEventPath;
-
+@AutoAdd.Ignore
 public class IdentityCrisisEvent extends AbstractImageEvent {
 
 

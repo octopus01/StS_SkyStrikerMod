@@ -68,11 +68,11 @@ public class TheSkyStriker extends CustomPlayer {
     // =============== BASE STATS =================
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 75;
-    public static final int MAX_HP = 75;
+    public static final int STARTING_HP = 60;
+    public static final int MAX_HP = 60;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
-    public static final int ORB_SLOTS = 3;
+    public static final int CARD_DRAW = 5;
+    public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
 
@@ -164,7 +164,6 @@ public class TheSkyStriker extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 //        for(int i=0;i<4;i++)
 
-        retVal.add(DefaultCommonAttack.ID);
         for(int i=0;i<2;i++) {
             retVal.add(AfterBurner.ID);
         }
@@ -185,7 +184,9 @@ public class TheSkyStriker extends CustomPlayer {
         retVal.add(Kagari.ID);
         retVal.add(Shizuku.ID);
         retVal.add(Kaina.ID);
-
+        retVal.add(MultiRole.ID);
+        retVal.add(AreaZero.ID);
+        retVal.add(Hayate.ID);
 
 //        retVal.add("SecretTechnique");
 //        retVal.add(DefaultUncommonAttack.ID);
