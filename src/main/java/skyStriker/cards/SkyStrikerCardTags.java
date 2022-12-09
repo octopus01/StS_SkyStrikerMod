@@ -8,5 +8,7 @@ public class SkyStrikerCardTags {
         public static AbstractCard.CardTags SkyStriker;
         @SpireEnum
         public static AbstractCard.CardTags SpellCard;
+        @SpireEnum
+        public static AbstractCard.CardTags FieldSpellCard;
 
 }

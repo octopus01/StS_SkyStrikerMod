@@ -25,6 +25,7 @@ import java.util.function.Predicate;
 
 import static skyStriker.DefaultMod.makeRelicOutlinePath;
 import static skyStriker.DefaultMod.makeRelicPath;
+@AutoAdd.Ignore
 public class BottledPlaceholderRelic extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
     // This file will show you how to use 2 things - (Mostly) The Custom Bottle Relic and the Custom Savable - they go hand in hand.
 

@@ -52,7 +52,8 @@
   },
   "skyStriker:AfterBurner": {
     "NAME": "Afterburners!",
-    "DESCRIPTION": "Deal !D! Damage. ."
+    "DESCRIPTION": "Deal !D! Damage. .",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡"
   },
   "skyStriker:JammingWaves": {
     "NAME": "JammingWaves!",

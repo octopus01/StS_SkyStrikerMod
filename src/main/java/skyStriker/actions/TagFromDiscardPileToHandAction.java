@@ -37,16 +37,19 @@ public class TagFromDiscardPileToHandAction extends AbstractGameAction {
     public TagFromDiscardPileToHandAction(int numberOfCards,AbstractCard.CardTags cardTags1) {
         this(numberOfCards, false,cardTags1);
     }
+    public TagFromDiscardPileToHandAction(int numberOfCards,AbstractCard.CardTags cardTags1,int newCost) {
+        this(numberOfCards, false,cardTags1,newCost);
+    }
 
-    public TagFromDiscardPileToHandAction(int numberOfCards, int newCost) {
-        this.newCost = 0;
+    public TagFromDiscardPileToHandAction(int numberOfCards,  boolean optional,AbstractCard.CardTags cardTags1,int newCost) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration =Settings.ACTION_DUR_MED;
-        this.player = AbstractDungeon.player;
+        this.p = AbstractDungeon.player;
         this.numberOfCards = numberOfCards;
-        this.optional = false;
+        this.optional = optional;
         this.setCost = true;
         this.newCost = newCost;
+        cardTags=cardTags1;
     }
 
     public void update() {
@@ -70,6 +73,7 @@ public class TagFromDiscardPileToHandAction extends AbstractGameAction {
                 if (this.p.hand.size() == 10) {
                     this.p.createHandIsFullDialog();
                 } else {
+                    if(setCost) card.cost=newCost;
                     card.unhover();
                     card.lighten(true);
                     card.setAngle(0.0F);
@@ -94,6 +98,7 @@ public class TagFromDiscardPileToHandAction extends AbstractGameAction {
                 while(var1.hasNext()) {
                     card = (AbstractCard)var1.next();
                     if(card.hasTag(cardTags)){
+                        if(setCost) card.costForTurn=newCost;
                         card.unhover();
                         if (this.p.hand.size() == 10) {
                             

@@ -11,7 +11,7 @@ import skyStriker.actions.UncommonPowerAction;
 import skyStriker.characters.TheSkyStriker;
 
 import static skyStriker.DefaultMod.makeCardPath;
-
+@AutoAdd.Ignore
 public class DefaultUncommonPower extends AbstractDynamicCard {
 
     /*

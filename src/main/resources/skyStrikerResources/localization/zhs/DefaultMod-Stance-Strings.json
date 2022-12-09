@@ -13,6 +13,6 @@
   },
   "skyStriker:HayateStance": {
     "NAME": "闪刀姬-飒天",
-    "DESCRIPTION": ["可以直接攻击"]
+    "DESCRIPTION": ["可以无视护盾直接攻击。战斗后发动，从卡组把1张「闪刀」卡送去墓地。"]
   }
 }

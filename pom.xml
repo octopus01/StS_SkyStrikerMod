@@ -6,8 +6,8 @@
     <groupId>defaultmod</groupId>
     <artifactId>skyStriker</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
     <name>Sky Striker Mod</name>
-    <version>0.0.1</version>
-    <description>A default base to start your own mod from.</description>
+    <version>0.5.0</version>
+    <description>A new character based on a yugioh archetype sky striker</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

@@ -35,12 +35,11 @@ public class SkyStrikerUpgradeAction extends AbstractGameAction {
 
     private void upgradeSkyStrikerSpellCards(CardGroup cardGroup) {
         for (AbstractCard c : cardGroup.group) {
-            if ((c.canUpgrade() && c.hasTag(SkyStriker) && c.hasTag(SpellCard) && !(c.upgraded))) {
+            if ((c.canUpgrade() && c.hasTag(SkyStriker) && !(c.upgraded))) {
                 if (cardGroup.type == CardGroupType.HAND) {
                     c.superFlash();
                 }
                 c.upgrade();
-
             }
         }
     }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import java.util.Iterator;
@@ -34,13 +35,11 @@ public class SkyStrikerDowngradeAction extends AbstractGameAction {
     }
 
     private void DowngradeSkyStrikerSpellCards(CardGroup cardGroup) {
-        Iterator var2 = cardGroup.group.iterator();
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
-            if (c.upgraded&&c.hasTag(SkyStriker)&&c.hasTag(SpellCard)) {
-                c.upgraded=false;
-                c.name.replace("+","");
-//                this.initializeTitle(); how to change title?
+        for (AbstractCard c : cardGroup.group) {
+            if (c.upgraded && c.hasTag(SkyStriker)) {
+                AbstractDynamicCard s=(AbstractDynamicCard)c;
+                s.downgrade();
+                s.initializeDescription();
             }
         }
     }

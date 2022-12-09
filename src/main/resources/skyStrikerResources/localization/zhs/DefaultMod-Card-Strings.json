@@ -52,25 +52,28 @@
   },
   "skyStriker:AfterBurner": {
     "NAME": "闪刀术式-烈火再燃",
-    "DESCRIPTION": "造成 !D! 点伤害"
+    "DESCRIPTION": "造成 !D! 点伤害",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点格挡"
   },
   "skyStriker:JammingWaves": {
     "NAME": "闪刀术式-妨害波纹",
-    "DESCRIPTION": "获得 !B! 点格挡."
+    "DESCRIPTION": "获得 !B! 点格挡.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡.反射4点伤害"
   },
   "skyStriker:WidowAnchor": {
     "NAME": "闪刀机-寡妇锚",
-    "DESCRIPTION": "敌人 NL 失去 !M! 点力量。 NL 给予 !M! 层 NL [#ffff00]虚弱[]。"
+    "DESCRIPTION": "给予 !M! 层 [#ffff00]虚弱[]。",
+    "UPGRADE_DESCRIPTION": "对方怪兽 NL 失去 !M! 点力量。 NL 给予 !M! 层  [#ffff00]虚弱[]。"
   },
   "skyStriker:EagleBooster": {
     "NAME": "闪刀机-鹰式推进器",
     "DESCRIPTION": "获得 !M! 层人工制品。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层人工制品。 NL 获得1层无实体。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 层人工制品。 NL 获得1回合闪避。"
   },
   "skyStriker:Engage": {
     "NAME": "闪刀起动-交闪",
-    "DESCRIPTION": "检索1带有闪刀的卡片",
-    "UPGRADE_DESCRIPTION": "检索1张闪刀加入手牌 NL 抽1张牌。",
+    "DESCRIPTION": "检索1带有闪刀的卡片,这回合费用变0",
+    "UPGRADE_DESCRIPTION": "检索1张闪刀加入手牌,这回合费用变0 NL 抽1张牌。",
     "EXTENDED_DESCRIPTION":["卡组中没有闪刀卡片"]
   },
   "skyStriker:HornetDrones": {
@@ -120,7 +123,7 @@
   },
   "skyStriker:Shizuku": {
     "NAME": "闪刀姬-雫空",
-    "DESCRIPTION": "对方的攻击力下降墓地魔法卡数量×1。变身水闪"
+    "DESCRIPTION": "回合结束时从牌组加入1张「闪刀」魔法卡加入手卡。变身水闪"
   },
   "skyStriker:MultiRole": {
     "NAME": "闪刀机关-多任务战机",
@@ -128,10 +131,24 @@
   },
   "skyStriker:AreaZero": {
     "NAME": "闪刀空域-零区",
-    "DESCRIPTION": "抽牌后，从自己卡组上面把3张卡翻开。从那之中选1张「闪刀」卡加入手卡。"
+    "DESCRIPTION": "抽牌阶段后，舍弃1张牌，从自己卡组上面把3张卡翻开。从那之中选1张「闪刀」卡加入手卡。"
   },
   "skyStriker:Hayate": {
     "NAME": "闪刀姬-飒天",
-    "DESCRIPTION": "可以直接攻击。战斗后发动，从卡组把1张「闪刀」卡送去墓地。变身风闪"
+    "DESCRIPTION": "变身风闪"
+  },
+  "skyStriker:ChickenGame": {
+    "NAME": "试胆竞速",
+    "DESCRIPTION": "每回合失去3点HP，额外抽1张牌"
+  },
+  "skyStriker:Brick": {
+    "NAME": "砖头",
+    "DESCRIPTION": "你卡手了"
+  },
+  "skyStriker:FoolishBurialGoods": {
+    "NAME": "愚蠢的副葬",
+    "DESCRIPTION": "从卡组把1张魔法·陷阱卡送去墓地",
+    "UPGRADE_DESCRIPTION": "从卡组把1张魔法·陷阱卡送去墓地。获得1点能量"
   }
+
 }

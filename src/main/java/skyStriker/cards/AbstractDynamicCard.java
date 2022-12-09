@@ -26,4 +26,12 @@ public abstract class AbstractDynamicCard extends AbstractDefaultCard {
         super(id, languagePack.getCardStrings(id).NAME, img, cost, languagePack.getCardStrings(id).DESCRIPTION, type, color, rarity, target);
 
     }
+
+    public void downgrade() {
+        if (upgraded) {
+            this.upgraded = false;
+            this.rawDescription = languagePack.getCardStrings(this.cardID).DESCRIPTION;
+            initializeDescription();
+        }
+    }
 }

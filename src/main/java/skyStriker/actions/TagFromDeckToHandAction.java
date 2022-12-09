@@ -17,14 +17,25 @@ import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 public class TagFromDeckToHandAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
+    private boolean setCost=false;
     private AbstractPlayer p;
     public static AbstractCard.CardTags cardTags;
+    private int newCost;
     public TagFromDeckToHandAction(int amount, AbstractCard.CardTags cardTags1) {
         cardTags=cardTags1;
         this.p = AbstractDungeon.player;
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
+    }
+    public TagFromDeckToHandAction(int amount, AbstractCard.CardTags cardTags1,int newCost){
+        cardTags=cardTags1;
+        this.p = AbstractDungeon.player;
+        this.setValues(this.p, AbstractDungeon.player, amount);
+        this.actionType = ActionType.CARD_MANIPULATION;
+        this.duration = Settings.ACTION_DUR_MED;
+        this.newCost=newCost;
+        this.setCost = true;
     }
 
     public void update() {
@@ -48,6 +59,7 @@ public class TagFromDeckToHandAction extends AbstractGameAction {
                     this.p.drawPile.moveToDiscardPile(card);
                     this.p.createHandIsFullDialog();
                 } else {
+                    if(setCost) card.costForTurn=newCost;
                     card.unhover();
                     card.lighten(true);
                     card.setAngle(0.0F);
@@ -74,6 +86,7 @@ public class TagFromDeckToHandAction extends AbstractGameAction {
                     card = (AbstractCard)var1.next();
                     if(card.hasTag(cardTags)){
                     card.unhover();
+                    if(setCost) card.costForTurn=newCost;
                     if (this.p.hand.size() == 10) {
                         this.p.drawPile.moveToDiscardPile(card);
                         this.p.createHandIsFullDialog();

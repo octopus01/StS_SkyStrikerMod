@@ -11,7 +11,7 @@ import skyStriker.characters.TheSkyStriker;
 import skyStriker.powers.RarePower;
 
 import static skyStriker.DefaultMod.makeCardPath;
-
+@AutoAdd.Ignore
 public class DefaultRarePower extends AbstractDynamicCard {
 
     /*

@@ -10,7 +10,7 @@ import skyStriker.DefaultMod;
 import skyStriker.characters.TheSkyStriker;
 
 import static skyStriker.DefaultMod.makeCardPath;
-
+@AutoAdd.Ignore
 public class DefaultUncommonSkill extends AbstractDynamicCard {
 
     /*

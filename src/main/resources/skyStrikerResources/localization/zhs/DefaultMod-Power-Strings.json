@@ -68,5 +68,11 @@
     "DESCRIPTIONS": [
       "这张卡进行战斗的伤害计算后才能发动。从卡组把1张「闪刀」卡送去墓地。"
     ]
-  }
+  },
+  "skyStriker:ChickenGamePower": {
+  "NAME": "试胆竞速",
+  "DESCRIPTIONS": [
+    "每回合失去3点HP，额外抽1张牌"
+  ]
+}
 }

@@ -77,7 +77,7 @@ public class KainaStance extends AbstractStance {
         sfxId = CardCrawlGame.sound.playAndLoop("STANCE_LOOP_CALM");
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.SKY, true));
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                      new KainaPower(AbstractDungeon.player, 1), 1));
+                      new KainaPower(AbstractDungeon.player, 0), 0));
     }
 
     public void onExitStance() {

@@ -23,12 +23,21 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import skyStriker.DefaultMod;
 import skyStriker.cards.*;
+import skyStriker.cards.CommonSpell.ChickenGame;
 import skyStriker.cards.CommonSpell.GracefulCharity;
 import skyStriker.cards.CommonSpell.PotOfGreed;
-import skyStriker.cards.SkyStriker.*;
-import skyStriker.relics.DefaultClickableRelic;
-import skyStriker.relics.PlaceholderRelic;
-import skyStriker.relics.PlaceholderRelic2;
+import skyStriker.cards.SkyStriker.attack.AfterBurner;
+import skyStriker.cards.SkyStriker.attack.ScissorsCross;
+import skyStriker.cards.SkyStriker.attack.SharkCannon;
+import skyStriker.cards.SkyStriker.attack.VectorBlast;
+import skyStriker.cards.SkyStriker.power.AreaZero;
+import skyStriker.cards.SkyStriker.skill.HerculesBase;
+import skyStriker.cards.SkyStriker.power.MultiRole;
+import skyStriker.cards.SkyStriker.skill.*;
+import skyStriker.cards.SkyStriker.stance.Hayate;
+import skyStriker.cards.SkyStriker.stance.Kagari;
+import skyStriker.cards.SkyStriker.stance.Kaina;
+import skyStriker.cards.SkyStriker.stance.Shizuku;
 import skyStriker.relics.SkyStriker.SkyStrikerDefaultRelic;
 
 import java.util.ArrayList;
@@ -59,6 +68,12 @@ public class TheSkyStriker extends CustomPlayer {
 
         @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+
+        @SpireEnum(name = "TRAP")
+        public static AbstractCard.CardColor COLOR_TRAP;
+
+        @SpireEnum(name = "TRAP") @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_TRAP_COLOR;
 
     }
 
@@ -164,17 +179,17 @@ public class TheSkyStriker extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 //        for(int i=0;i<4;i++)
 
-        for(int i=0;i<2;i++) {
+        for(int i=0;i<3;i++) {
             retVal.add(AfterBurner.ID);
         }
-        for(int i=0;i<2;i++) {
+        for(int i=0;i<3;i++) {
             retVal.add(JammingWaves.ID);
         }
-        retVal.add(PotOfGreed.ID);
-        retVal.add(GracefulCharity.ID);
+//        retVal.add(PotOfGreed.ID);
+//        retVal.add(GracefulCharity.ID);
         retVal.add(WidowAnchor.ID);
         retVal.add(EagleBooster.ID);
-        retVal.add("Apotheosis");
+//        retVal.add("Apotheosis");
         retVal.add(Engage.ID);
         retVal.add(HornetDrones.ID);
         retVal.add(VectorBlast.ID);
@@ -187,22 +202,7 @@ public class TheSkyStriker extends CustomPlayer {
         retVal.add(MultiRole.ID);
         retVal.add(AreaZero.ID);
         retVal.add(Hayate.ID);
-
-//        retVal.add("SecretTechnique");
-//        retVal.add(DefaultUncommonAttack.ID);
-//        retVal.add(DefaultRareAttack.ID);
-//
-//        retVal.add(DefaultCommonSkill.ID);
-//        retVal.add(DefaultUncommonSkill.ID);
-//        retVal.add(DefaultRareSkill.ID);
-//
-//        retVal.add(DefaultCommonPower.ID);
-//        retVal.add(DefaultUncommonPower.ID);
-//        retVal.add(DefaultRarePower.ID);
-//
-//        retVal.add(DefaultAttackWithVariable.ID);
-//        retVal.add(DefaultSecondMagicNumberSkill.ID);
-//        retVal.add(OrbSkill.ID);
+//        retVal.add(ChickenGame.ID);
         return retVal;
     }
 

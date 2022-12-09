@@ -3,8 +3,11 @@ package skyStriker.powers.SkyStriker;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.brashmonkey.spriter.Player;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import skyStriker.DefaultMod;
@@ -47,6 +50,7 @@ public class AreaZeroPower extends AbstractPower implements CloneablePowerInterf
     @Override
     public void atStartOfTurnPostDraw() {
         {
+            addToBot(new DiscardAction(AbstractDungeon.player,AbstractDungeon.player,1,false));
             addToBot(new CheckDeckTopAndAddAction(3, 1, SkyStriker));
         }
     }
