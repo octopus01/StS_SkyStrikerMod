@@ -59,9 +59,9 @@ public class PotOfGreed extends AbstractDynamicCard {
 
         this.addToBot(new DrawCardAction(p, 2));
     }
-    public AbstractCard makeCopy() {
-        return new PotOfGreed();
-    }
+//    public AbstractCard makeCopy() {
+//        return new PotOfGreed();
+//    }
     //Upgraded stats.
     @Override
     public void upgrade() {

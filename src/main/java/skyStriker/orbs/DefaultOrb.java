@@ -1,5 +1,6 @@
 package skyStriker.orbs;
 
+import basemod.AutoAdd;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -23,7 +24,7 @@ import basemod.abstracts.CustomOrb;
 import skyStriker.DefaultMod;
 
 import static skyStriker.DefaultMod.makeOrbPath;
-
+@AutoAdd.Ignore
 public class DefaultOrb extends CustomOrb {
 
     // Standard ID/Description

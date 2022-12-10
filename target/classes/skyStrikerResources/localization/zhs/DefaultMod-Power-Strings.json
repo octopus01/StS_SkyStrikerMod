@@ -54,13 +54,13 @@
   "skyStriker:MultiRolePower": {
     "NAME":"多任务战机",
     "DESCRIPTIONS": [
-      "多任务战机。"
+      "结束阶段选最多自己发动的「闪刀」魔法卡数量墓地的「闪刀」魔法卡加入手牌。加入的手牌使用时消耗"
     ]
   },
   "skyStriker:AreaZeroPower": {
     "NAME":"闪刀空域-零区",
     "DESCRIPTIONS": [
-      "抽牌后从自己卡组上面把3张卡翻开。可以从那之中选1张「闪刀」卡加入手卡"
+      "抽牌后舍弃1张手牌，从自己卡组上面把3张卡翻开。可以从那之中选1张「闪刀」卡加入手卡"
     ]
   },
   "skyStriker:HayatePower": {

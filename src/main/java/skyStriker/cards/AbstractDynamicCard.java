@@ -1,6 +1,8 @@
 package skyStriker.cards;
 
 import basemod.AutoAdd;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import skyStriker.cards.curse.Brick;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
@@ -34,4 +36,5 @@ public abstract class AbstractDynamicCard extends AbstractDefaultCard {
             initializeDescription();
         }
     }
+
 }

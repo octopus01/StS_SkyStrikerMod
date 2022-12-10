@@ -89,7 +89,7 @@
   "skyStriker:HerculesBase": {
     "NAME": "闪刀机构-大力神基地",
     "DESCRIPTION": "下一次攻击变成2次。",
-    "UPGRADE_DESCRIPTION": "下一次攻击变成2次。 NL 抽1。"
+    "UPGRADE_DESCRIPTION": "下一次攻击变成2次。 NL 抽1张牌。"
   },
   "skyStriker:VectorBlast": {
     "NAME": "闪刀术式-爆风偏向",

@@ -50,9 +50,9 @@ public class Hayate extends AbstractDynamicCard {
 
     }
 
-    public AbstractCard makeCopy() {
-        return new Hayate();
-    }
+//    public AbstractCard makeCopy() {
+//        return new Hayate();
+//    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

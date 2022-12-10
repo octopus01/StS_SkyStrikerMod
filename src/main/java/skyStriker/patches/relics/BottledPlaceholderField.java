@@ -1,5 +1,6 @@
 package skyStriker.patches.relics;
 
+import basemod.AutoAdd;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,7 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
  *
  *  https://github.com/kiooeht/ModTheSpire/wiki/SpirePatch
  */
-
+@AutoAdd.Ignore
 @SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
 public class BottledPlaceholderField {
     public static SpireField<Boolean> inBottledPlaceholderField = new SpireField<>(() -> false);

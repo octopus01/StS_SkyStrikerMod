@@ -18,6 +18,7 @@ import skyStriker.characters.TheSkyStriker;
 
 import static skyStriker.DefaultMod.getModID;
 import static skyStriker.DefaultMod.makeCardPath;
+
 public class Brick extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(Brick.class.getSimpleName());
     public static final String IMG = makeCardPath("Brick.png");
@@ -32,7 +33,7 @@ public class Brick extends AbstractDynamicCard {
     public void upgrade() {
     }
 
-    public AbstractCard makeCopy() {
-        return new Brick();
-    }
+//    public AbstractCard makeCopy() {
+//        return new Brick();
+//    }
 }

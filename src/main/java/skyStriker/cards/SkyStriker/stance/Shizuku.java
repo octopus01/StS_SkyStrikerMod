@@ -49,9 +49,9 @@ public class Shizuku extends AbstractDynamicCard {
         }
     }
 
-    public AbstractCard makeCopy() {
-        return new Shizuku();
-    }
+//    public AbstractCard makeCopy() {
+//        return new Shizuku();
+//    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

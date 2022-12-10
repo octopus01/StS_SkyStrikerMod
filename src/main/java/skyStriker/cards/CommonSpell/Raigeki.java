@@ -1,4 +1,4 @@
-package skyStriker.cards.SkyStriker.attack;
+package skyStriker.cards.CommonSpell;
 
 import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;

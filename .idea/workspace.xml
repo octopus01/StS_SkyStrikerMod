@@ -4,119 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0bd0d5b-3718-4476-9274-df5b2de13b64" name="变更" comment="Sky Striker 0.5.0&#10;add more descriptions&#10;add AreaZero&#10;add Hayate a new stance&#10;add MultiRole">
-      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/CommonSpell/ChickenGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/CommonSpell/FoolishBurialGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/CommonSpell/Raigeki.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/curse/Brick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/skyStriker/powers/SkyStriker/ChickenGamePower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Brick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Brick_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/ChickenGame.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/ChickenGame_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/FoolishBurialGoods.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/FoolishBurialGoods_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/ChickenGame32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/powers/ChickenGame84.png" afterDir="false" />
+    <list default="true" id="c0bd0d5b-3718-4476-9274-df5b2de13b64" name="变更" comment="Sky Striker 0.5.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/actions/SkyStrikerDowngradeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/actions/SkyStrikerDowngradeAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/actions/SkyStrikerUpgradeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/actions/SkyStrikerUpgradeAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/actions/TagFromDeckToHandAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/actions/TagFromDeckToHandAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/actions/TagFromDiscardPileToHandAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/actions/TagFromDiscardPileToHandAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/AbstractDynamicCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/AbstractDynamicCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultCommonPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultCommonPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultRarePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultRarePower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultUncommonPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultUncommonPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultUncommonSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/DefaultUncommonSkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/OrbSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/OrbSkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/AfterBurner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/attack/AfterBurner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/AreaZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/power/AreaZero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/EagleBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/skill/EagleBooster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Engage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/skill/Engage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Hayate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Hayate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/HerculesBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/skill/HerculesBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/HornetDrones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/skill/HornetDrones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/JammingWaves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/skill/JammingWaves.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Kagari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Kagari.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Kaina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Kaina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/MultiRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/power/MultiRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/ScissorsCross.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/attack/ScissorsCross.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/SharkCannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/attack/SharkCannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/Shizuku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Shizuku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/VectorBlast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/attack/VectorBlast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/WidowAnchor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/skill/WidowAnchor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStrikerCardTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStrikerCardTags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/characters/TheSkyStriker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/characters/TheSkyStriker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/powers/SkyStriker/AreaZeroPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/powers/SkyStriker/AreaZeroPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/relics/BottledPlaceholderRelic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/relics/BottledPlaceholderRelic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/stances/HayateStance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/stances/HayateStance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/stances/KagariStance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/stances/KagariStance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/stances/KainaStance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/stances/KainaStance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Hayate.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Hayate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Hayate_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Hayate_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kaina.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kaina.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kaina_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Kaina_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/MultiRole.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/MultiRole.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/MultiRole_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/MultiRole_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Power_p.psd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Power_p.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Skill_p.psd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/images/cards/Skill_p.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/eng/DefaultMod-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/eng/DefaultMod-Card-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/CommonSpell/PotOfGreed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/CommonSpell/PotOfGreed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/CommonSpell/Raigeki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/CommonSpell/Raigeki.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Hayate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Hayate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Kagari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Kagari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Kaina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Kaina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Shizuku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/SkyStriker/stance/Shizuku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/cards/curse/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/cards/curse/Brick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/orbs/DefaultOrb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/orbs/DefaultOrb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/patches/DefaultInsertPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/patches/DefaultInsertPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/patches/relics/BottledPlaceholderField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/patches/relics/BottledPlaceholderField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skyStriker/potions/PlaceholderPotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skyStriker/potions/PlaceholderPotion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Character-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Character-Strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Stance-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyStrikerResources/localization/zhs/DefaultMod-Stance-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModTheSpire.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/actions/SkyStrikerDowngradeAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/actions/SkyStrikerDowngradeAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/actions/SkyStrikerUpgradeAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/actions/SkyStrikerUpgradeAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/actions/TagFromDeckToHandAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/actions/TagFromDeckToHandAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/actions/TagFromDiscardPileToHandAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/actions/TagFromDiscardPileToHandAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/AbstractDynamicCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/AbstractDynamicCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultCommonPower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultCommonPower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultRarePower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultRarePower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultUncommonPower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultUncommonPower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultUncommonSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/DefaultUncommonSkill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/OrbSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/OrbSkill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/AfterBurner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/AreaZero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/EagleBooster.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Engage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Hayate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/HerculesBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/HornetDrones.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/JammingWaves.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Kagari.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Kaina.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/MultiRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/ScissorsCross.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/SharkCannon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/Shizuku.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/VectorBlast.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStriker/WidowAnchor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStrikerCardTags.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/cards/SkyStrikerCardTags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/characters/TheSkyStriker$Enums.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/characters/TheSkyStriker$Enums.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/characters/TheSkyStriker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/characters/TheSkyStriker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/powers/SkyStriker/AreaZeroPower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/powers/SkyStriker/AreaZeroPower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/relics/BottledPlaceholderRelic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/relics/BottledPlaceholderRelic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/stances/HayateStance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/stances/HayateStance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/stances/KagariStance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/stances/KagariStance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStriker/stances/KainaStance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStriker/stances/KainaStance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Hayate.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Hayate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Hayate_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Hayate_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Kaina.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Kaina.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Kaina_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Kaina_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Multirole.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Multirole.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Multirole_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Multirole_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Power_p.psd" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Power_p.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Skill_p.psd" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/cards/Skill_p.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/powers/ZeroArea32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/images/powers/ZeroArea84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/eng/DefaultMod-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/eng/DefaultMod-Card-Strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Card-Strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Power-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Stance-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/skyStrikerResources/localization/zhs/DefaultMod-Stance-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/skyStriker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/skyStriker.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -317,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670175245768</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Sky Striker 0.5.0">
+      <created>1670604377292</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670604377292</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -364,7 +277,8 @@
     <MESSAGE value="Sky Striker 0.0.6&#10;add  descriptions&#10;add Kaina" />
     <MESSAGE value="Sky Striker 0.5.0&#10;add more descriptions&#10;add AreaZero&#10;add Hayate a new stance" />
     <MESSAGE value="Sky Striker 0.5.0&#10;add more descriptions&#10;add AreaZero&#10;add Hayate a new stance&#10;add MultiRole" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sky Striker 0.5.0&#10;add more descriptions&#10;add AreaZero&#10;add Hayate a new stance&#10;add MultiRole" />
+    <MESSAGE value="Sky Striker 0.5.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sky Striker 0.5.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

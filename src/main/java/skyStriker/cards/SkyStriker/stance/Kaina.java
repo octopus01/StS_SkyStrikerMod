@@ -48,9 +48,9 @@ public class Kaina extends AbstractDynamicCard {
 
     }
 
-    public AbstractCard makeCopy() {
-        return new Kaina();
-    }
+//    public AbstractCard makeCopy() {
+//        return new Kaina();
+//    }
 
     static {
          cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

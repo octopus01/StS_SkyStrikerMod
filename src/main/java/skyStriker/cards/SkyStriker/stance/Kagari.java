@@ -47,9 +47,9 @@ public class Kagari extends AbstractDynamicCard {
 
     }
 
-    public AbstractCard makeCopy() {
-        return new Kagari();
-    }
+//    public AbstractCard makeCopy() {
+//        return new Kagari();
+//    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
