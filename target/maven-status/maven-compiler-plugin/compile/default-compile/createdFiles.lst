@@ -41,6 +41,7 @@ skyStriker\characters\TheSkyStriker$Enums.class
 skyStriker\patches\relics\BottledPlaceholderField$MakeStatEquivalentCopy.class
 skyStriker\powers\SkyStriker\HayatePower.class
 skyStriker\patches\DefaultInsertPatch.class
+skyStriker\cards\CommonSpell\Raigeki.class
 skyStriker\powers\SkyStriker\ChickenGamePower.class
 skyStriker\cards\SkyStriker\skill\WidowAnchor.class
 skyStriker\util\TextureLoader.class
@@ -55,7 +56,6 @@ skyStriker\cards\SkyStriker\attack\ScissorsCross.class
 skyStriker\cards\SkyStriker\Token.class
 skyStriker\powers\SkyStriker\AreaZeroPower.class
 skyStriker\powers\SkyStriker\KainaPower.class
-skyStriker\cards\SkyStriker\attack\Raigeki.class
 skyStriker\actions\TagFromDeckToHandAction.class
 skyStriker\patches\DefaultInsertPatch$Locator.class
 skyStriker\variables\DefaultSecondMagicNumber.class

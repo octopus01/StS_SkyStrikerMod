@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "skyStriker:SkyStrikerDefaultRelic": {
+    "NAME": "初始遗物",
+    "FLAVOR": "What is this.",
+    "DESCRIPTIONS": [
+      "弃牌堆魔法卡>=3时，升级闪刀卡片"
+    ]
   }
 }
