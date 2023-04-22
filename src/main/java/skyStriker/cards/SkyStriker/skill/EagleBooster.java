@@ -6,19 +6,19 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
 import skyStriker.powers.SkyStriker.DodgePower;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 
 public class EagleBooster extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(EagleBooster.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(EagleBooster.class.getSimpleName());
     public static final String IMG = makeCardPath("EagleBooster.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

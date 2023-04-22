@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.characters.TheSkyStriker;
 import skyStriker.powers.SkyStriker.ChickenGamePower;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.*;
 
 public class  ChickenGame extends AbstractDynamicCard {
@@ -19,7 +19,7 @@ public class  ChickenGame extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(ChickenGame.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(ChickenGame.class.getSimpleName());
     public static final String IMG = makeCardPath("ChickenGame.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 //    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

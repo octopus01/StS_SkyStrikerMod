@@ -6,15 +6,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import skyStriker.DefaultMod;
-import skyStriker.actions.TagFromDeckToHandAction;
+import skyStriker.SkyStrikerMod;
+import skyStriker.actions.tagFromDeckToHandAction;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
 
 import java.util.Iterator;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 
 public class Engage extends AbstractDynamicCard {
@@ -28,7 +28,7 @@ public class Engage extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(Engage.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(Engage.class.getSimpleName());
     public static final String IMG = makeCardPath("Engage.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -59,7 +59,7 @@ public class Engage extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new TagFromDeckToHandAction(1,SkyStriker,0));;
+        this.addToBot(new tagFromDeckToHandAction(1,SkyStriker,0,cardID,false));;
         if(upgraded) this.addToBot(new DrawCardAction(p, 1));
     }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {

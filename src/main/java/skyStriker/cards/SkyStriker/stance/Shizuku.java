@@ -6,25 +6,24 @@ package skyStriker.cards.SkyStriker.stance;
 //
 
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.characters.TheSkyStriker;
 import skyStriker.powers.SkyStriker.ShizukuPower;
 import skyStriker.stances.ShizukuStance;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
+import static skyStriker.cards.SkyStrikerCardTags.SkyStrikerAce;
 
 public class Shizuku extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(Shizuku.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(Shizuku.class.getSimpleName());
     private static final CardStrings cardStrings;
     public static final String IMG = makeCardPath("Shizuku.png");
 
@@ -32,6 +31,7 @@ public class Shizuku extends AbstractDynamicCard {
         super(ID, IMG, 2, CardType.POWER,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         this.tags.add(SkyStriker);
+        this.tags.add(SkyStrikerAce);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,9 +49,9 @@ public class Shizuku extends AbstractDynamicCard {
         }
     }
 
-    public AbstractCard makeCopy() {
-        return new Shizuku();
-    }
+//    public AbstractCard makeCopy() {
+//        return new Shizuku();
+//    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

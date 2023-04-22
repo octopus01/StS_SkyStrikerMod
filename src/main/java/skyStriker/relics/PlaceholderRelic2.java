@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.util.TextureLoader;
 
-import static skyStriker.DefaultMod.makeRelicOutlinePath;
-import static skyStriker.DefaultMod.makeRelicPath;
+import static skyStriker.SkyStrikerMod.makeRelicOutlinePath;
+import static skyStriker.SkyStrikerMod.makeRelicPath;
 @AutoAdd.Ignore
 public class PlaceholderRelic2 extends CustomRelic {
     /*
@@ -21,7 +21,7 @@ public class PlaceholderRelic2 extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("PlaceholderRelic2");
+    public static final String ID = SkyStrikerMod.makeID("PlaceholderRelic2");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));

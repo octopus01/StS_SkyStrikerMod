@@ -4,11 +4,11 @@ import basemod.AutoAdd;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.util.TextureLoader;
 
-import static skyStriker.DefaultMod.makeRelicOutlinePath;
-import static skyStriker.DefaultMod.makeRelicPath;
+import static skyStriker.SkyStrikerMod.makeRelicOutlinePath;
+import static skyStriker.SkyStrikerMod.makeRelicPath;
 @AutoAdd.Ignore
 public class PlaceholderRelic extends CustomRelic {
 
@@ -19,7 +19,7 @@ public class PlaceholderRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("PlaceholderRelic");
+    public static final String ID = SkyStrikerMod.makeID("PlaceholderRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));

@@ -1,5 +1,6 @@
 package skyStriker.orbs;
 
+import basemod.AutoAdd;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -20,14 +21,14 @@ import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 
 import basemod.abstracts.CustomOrb;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 
-import static skyStriker.DefaultMod.makeOrbPath;
-
+import static skyStriker.SkyStrikerMod.makeOrbPath;
+@AutoAdd.Ignore
 public class DefaultOrb extends CustomOrb {
 
     // Standard ID/Description
-    public static final String ORB_ID = DefaultMod.makeID("DefaultOrb");
+    public static final String ORB_ID = SkyStrikerMod.makeID("DefaultOrb");
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
 

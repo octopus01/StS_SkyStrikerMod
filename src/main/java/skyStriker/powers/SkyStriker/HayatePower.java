@@ -8,19 +8,18 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import skyStriker.DefaultMod;
-import skyStriker.actions.CheckDeckTopAndAddAction;
+import skyStriker.SkyStrikerMod;
 import skyStriker.actions.DeckToDiscardPileAction;
 import skyStriker.util.TextureLoader;
 
-import static skyStriker.DefaultMod.makePowerPath;
+import static skyStriker.SkyStrikerMod.makePowerPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 
 
 public class HayatePower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("HayatePower");
+    public static final String POWER_ID = SkyStrikerMod.makeID("HayatePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

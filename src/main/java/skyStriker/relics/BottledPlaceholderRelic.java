@@ -16,15 +16,15 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.patches.relics.BottledPlaceholderField;
 import skyStriker.util.TextureLoader;
 
 import java.util.Iterator;
 import java.util.function.Predicate;
 
-import static skyStriker.DefaultMod.makeRelicOutlinePath;
-import static skyStriker.DefaultMod.makeRelicPath;
+import static skyStriker.SkyStrikerMod.makeRelicOutlinePath;
+import static skyStriker.SkyStrikerMod.makeRelicPath;
 @AutoAdd.Ignore
 public class BottledPlaceholderRelic extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
     // This file will show you how to use 2 things - (Mostly) The Custom Bottle Relic and the Custom Savable - they go hand in hand.
@@ -44,7 +44,7 @@ public class BottledPlaceholderRelic extends CustomRelic implements CustomBottle
 
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("BottledPlaceholderRelic");
+    public static final String ID = SkyStrikerMod.makeID("BottledPlaceholderRelic");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BottledPlaceholder.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BottledPlaceholder.png"));
 

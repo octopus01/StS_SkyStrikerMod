@@ -1,6 +1,18 @@
 {
   "skyStriker:KagariStance": {
-    "NAME": "asd",
-    "DESCRIPTION": ["sdd"]
+    "NAME": "Sky Striker Ace-Kagari",
+    "DESCRIPTION": ["Gains 1 ATK for each Spell in your DiscardPile"]
+  },
+  "skyStriker:ShizukuStance": {
+    "NAME": "Sky Striker Ace-Shizuku",
+    "DESCRIPTION": ["All enemy lose 1 ATK for each Spell in your DiscardPile"]
+  },
+  "skyStriker:KainaStance": {
+    "NAME": "Sky Striker Ace-Kaina",
+    "DESCRIPTION": ["Each time you activate \"Sky Striker\" Spell Card, gain 1 HP"]
+  },
+  "skyStriker:HayateStance": {
+    "NAME": "Sky Striker Ace-Hayate",
+    "DESCRIPTION": ["Ignore Enemy's Block.After attacking send 1 \"Sky Striker\" card from your Deck to the Discard Pile"]
   }
 }

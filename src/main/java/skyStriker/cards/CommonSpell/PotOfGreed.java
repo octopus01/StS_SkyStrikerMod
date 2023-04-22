@@ -1,15 +1,14 @@
 package skyStriker.cards.CommonSpell;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 import com.megacrit.cardcrawl.localization.CardStrings;
 public class PotOfGreed extends AbstractDynamicCard {
 
@@ -22,7 +21,7 @@ public class PotOfGreed extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(PotOfGreed.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(PotOfGreed.class.getSimpleName());
     public static final String IMG = makeCardPath("PotOfGreed.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -59,9 +58,9 @@ public class PotOfGreed extends AbstractDynamicCard {
 
         this.addToBot(new DrawCardAction(p, 2));
     }
-    public AbstractCard makeCopy() {
-        return new PotOfGreed();
-    }
+//    public AbstractCard makeCopy() {
+//        return new PotOfGreed();
+//    }
     //Upgraded stats.
     @Override
     public void upgrade() {

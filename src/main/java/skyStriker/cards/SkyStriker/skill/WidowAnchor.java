@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 
 public class WidowAnchor extends AbstractDynamicCard {
 
@@ -22,7 +22,7 @@ public class WidowAnchor extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(WidowAnchor.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(WidowAnchor.class.getSimpleName());
     public static final String IMG = makeCardPath("WidowAnchor.png");
 
     // /TEXT DECLARATION/

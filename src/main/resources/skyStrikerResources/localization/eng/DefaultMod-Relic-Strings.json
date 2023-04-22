@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "skyStriker:SkyStrikerDefaultRelic": {
+    "NAME": "DefaultRelic",
+    "FLAVOR": "by dispatching through special gates, she can access various “Sky Striker Ace” modes,depending on the situation, and each Mode can use a mysterious “Sky Striker Maneuver”, each powerful enough to change the tide of battle.",
+    "DESCRIPTIONS": [
+      "When the number of Spell in Discard Pile>=3,upgrade Sky Striker cards"
+    ]
   }
 }

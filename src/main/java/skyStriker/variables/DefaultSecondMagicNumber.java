@@ -4,7 +4,7 @@ import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import skyStriker.cards.AbstractDefaultCard;
 
-import static skyStriker.DefaultMod.makeID;
+import static skyStriker.SkyStrikerMod.makeID;
 
 public class DefaultSecondMagicNumber extends DynamicVariable {
 

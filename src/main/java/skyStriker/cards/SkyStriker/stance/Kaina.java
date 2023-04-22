@@ -1,9 +1,7 @@
 package skyStriker.cards.SkyStriker.stance;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,16 +9,17 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.characters.TheSkyStriker;
 import skyStriker.stances.KainaStance;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
+import static skyStriker.cards.SkyStrikerCardTags.SkyStrikerAce;
 
 public class Kaina extends AbstractDynamicCard {
-    public static final String ID =  DefaultMod.makeID(Kaina.class.getSimpleName());
+    public static final String ID =  SkyStrikerMod.makeID(Kaina.class.getSimpleName());
     private static final CardStrings cardStrings;
     public static final String IMG = makeCardPath("Kaina.png");
 
@@ -31,6 +30,7 @@ public class Kaina extends AbstractDynamicCard {
         super(ID,  IMG, 2, CardType.POWER,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.RARE, CardTarget.ENEMY);
         this.exhaust = true;
         this.tags.add(SkyStriker);
+        this.tags.add(SkyStrikerAce);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,9 +48,9 @@ public class Kaina extends AbstractDynamicCard {
 
     }
 
-    public AbstractCard makeCopy() {
-        return new Kaina();
-    }
+//    public AbstractCard makeCopy() {
+//        return new Kaina();
+//    }
 
     static {
          cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

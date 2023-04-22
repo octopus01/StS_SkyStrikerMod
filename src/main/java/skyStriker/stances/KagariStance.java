@@ -20,14 +20,14 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import com.megacrit.cardcrawl.vfx.stance.WrathParticleEffect;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 
 import java.util.Iterator;
 
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
 public class KagariStance extends AbstractStance {
-    public static final String STANCE_ID =  DefaultMod.makeID(KagariStance.class.getSimpleName());
+    public static final String STANCE_ID =  SkyStrikerMod.makeID(KagariStance.class.getSimpleName());
     private static final StanceStrings stanceString;
     private static long sfxId;
 

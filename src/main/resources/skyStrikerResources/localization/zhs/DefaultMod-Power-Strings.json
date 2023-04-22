@@ -40,27 +40,27 @@
     ]
   },
   "skyStriker:ShizukuPower": {
-    "NAME": "水闪1效",
+    "NAME": "水闪2效",
     "DESCRIPTIONS": [
-      "回合的结束阶段才能发动。从卡组把一张「闪刀」魔法卡加入手卡。"
+      "敌方攻击力下降自己墓地的魔法卡数量×1。"
     ]
   },
   "skyStriker:KainaPower": {
     "NAME": "地闪2效",
     "DESCRIPTIONS": [
-      "每次自己把「闪刀」魔法卡的效果发动，自己回复1基本分。"
+      "每次自己把「闪刀」魔法卡的效果发动，自己回复1HP。"
     ]
   },
   "skyStriker:MultiRolePower": {
     "NAME":"多任务战机",
     "DESCRIPTIONS": [
-      "多任务战机。"
+      "结束阶段选最多自己发动的「闪刀」魔法卡数量墓地的「闪刀」魔法卡加入手牌。加入的手牌使用时消耗"
     ]
   },
   "skyStriker:AreaZeroPower": {
     "NAME":"闪刀空域-零区",
     "DESCRIPTIONS": [
-      "抽牌后从自己卡组上面把3张卡翻开。可以从那之中选1张「闪刀」卡加入手卡"
+      "抽牌后舍弃1张手牌，从自己卡组上面把3张卡翻开。可以从那之中选1张「闪刀」卡加入手卡"
     ]
   },
   "skyStriker:HayatePower": {

@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
 import skyStriker.powers.SkyStriker.JammingWavesPower;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 
 public class JammingWaves extends AbstractDynamicCard {
 
@@ -21,7 +21,7 @@ public class JammingWaves extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(JammingWaves.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(JammingWaves.class.getSimpleName());
     public static final String IMG = makeCardPath("JammingWaves.png");
 
     // /TEXT DECLARATION/

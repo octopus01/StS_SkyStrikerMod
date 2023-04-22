@@ -1,7 +1,6 @@
-package skyStriker.cards.SkyStriker.attack;
+package skyStriker.cards.CommonSpell;
 
 import basemod.AutoAdd;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -13,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
@@ -21,13 +20,13 @@ import skyStriker.stances.HayateStance;
 
 import java.util.Objects;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 @AutoAdd.Ignore
 public class Raigeki extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(Raigeki.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(Raigeki.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = makeCardPath("Raigeki.png");
@@ -79,14 +78,6 @@ public class Raigeki extends AbstractDynamicCard {
             baseDamage=12;
             this.upgradedDamage = true;
 //            upgradeDamage(UPGRADE_PLUS_DMG);
-            initializeDescription();
-        }
-    }
-    public void downgrade(){
-        if(upgraded){
-            upgraded=false;
-//            baseDamage=8;
-            this.initializeTitle();
             initializeDescription();
         }
     }

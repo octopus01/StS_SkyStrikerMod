@@ -1,27 +1,24 @@
 package skyStriker.powers.SkyStriker;
 
 import basemod.interfaces.CloneablePowerInterface;
-import basemod.interfaces.OnCardUseSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.util.TextureLoader;
 
 import java.util.Iterator;
 
-import static skyStriker.DefaultMod.makePowerPath;
+import static skyStriker.SkyStrikerMod.makePowerPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
 
@@ -30,7 +27,7 @@ import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
 public class SkyStrikerUpgradePower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("SkyStrikerUpgradePower");
+    public static final String POWER_ID = SkyStrikerMod.makeID("SkyStrikerUpgradePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

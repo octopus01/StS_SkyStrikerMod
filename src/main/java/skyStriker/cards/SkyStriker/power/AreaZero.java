@@ -5,13 +5,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.actions.CheckDeckTopAndAddAction;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.characters.TheSkyStriker;
 import skyStriker.powers.SkyStriker.AreaZeroPower;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
 
@@ -20,7 +20,7 @@ public class  AreaZero extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(AreaZero.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(AreaZero.class.getSimpleName());
     public static final String IMG = makeCardPath("AreaZero.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 //    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

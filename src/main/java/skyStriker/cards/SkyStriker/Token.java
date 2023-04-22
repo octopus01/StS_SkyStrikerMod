@@ -1,25 +1,22 @@
 package skyStriker.cards.SkyStriker;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
+import skyStriker.actions.tagFromDeckToHandAction;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
-import skyStriker.powers.SkyStriker.SubstitutePower;
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 
 public class Token extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(Token.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(Token.class.getSimpleName());
     public static final String IMG = makeCardPath("Token.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -52,7 +49,8 @@ public class Token extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            this.addToBot(new ApplyPowerAction(p, p, new SubstitutePower(p, 1), 1));
+//            this.addToBot(new ApplyPowerAction(p, p, new SubstitutePower(p, 1), 1));
+        this.addToBot(new tagFromDeckToHandAction(1,SkyStrikerCardTags.SkyStrikerAce));
     }
 
     //Upgraded stats.

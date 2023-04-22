@@ -18,11 +18,11 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import com.megacrit.cardcrawl.vfx.stance.WrathParticleEffect;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.powers.SkyStriker.HayatePower;
 
 public class HayateStance extends AbstractStance {
-    public static final String STANCE_ID =  DefaultMod.makeID(HayateStance.class.getSimpleName());
+    public static final String STANCE_ID =  SkyStrikerMod.makeID(HayateStance.class.getSimpleName());
     private static final StanceStrings stanceString;
     private static long sfxId;
 

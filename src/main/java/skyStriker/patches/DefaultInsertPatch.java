@@ -1,5 +1,6 @@
 package skyStriker.patches;
 
+import basemod.AutoAdd;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
@@ -51,7 +52,7 @@ import org.apache.logging.log4j.Logger;
  *
  * Let's get to it!
  */
-
+@AutoAdd.Ignore
 @SpirePatch(    // "Use the @SpirePatch annotation on the patch class."
         clz = AbstractDungeon.class, // This is the class where the method we will be patching is. In our case - Abstract Dungeon
         method = "returnRandomRelicKey" // This is the name of the method we will be patching.

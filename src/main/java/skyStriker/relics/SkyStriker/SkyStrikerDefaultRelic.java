@@ -2,26 +2,20 @@ package skyStriker.relics.SkyStriker;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.actions.SkyStrikerDowngradeAction;
 import skyStriker.actions.SkyStrikerUpgradeAction;
-import skyStriker.powers.SkyStriker.JammingWavesPower;
-import skyStriker.powers.SkyStriker.SkyStrikerUpgradePower;
 import skyStriker.util.TextureLoader;
 
 import java.util.Iterator;
 
-import static skyStriker.DefaultMod.makeRelicOutlinePath;
-import static skyStriker.DefaultMod.makeRelicPath;
+import static skyStriker.SkyStrikerMod.makeRelicOutlinePath;
+import static skyStriker.SkyStrikerMod.makeRelicPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
 
@@ -34,7 +28,7 @@ public class SkyStrikerDefaultRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("SkyStrikerDefaultRelic");
+    public static final String ID = SkyStrikerMod.makeID("SkyStrikerDefaultRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SkyStriker_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SkyStriker_relic.png"));

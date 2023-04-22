@@ -6,5 +6,65 @@
 "skyStriker:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"skyStriker:DodgePower": {
+        "NAME": "Dodge",
+        "DESCRIPTIONS": [
+                "Dodge for 1 turn"
+        ]
+},
+"skyStriker:SubstitutePower": {
+        "NAME": "Substitute",
+        "DESCRIPTIONS": [
+                "Make 1 attack ineffective"
+        ]
+},
+"skyStriker:JammingWavesPower": {
+        "NAME": "JammingWaves",
+        "DESCRIPTIONS": [
+                "Reflect 3 damage"
+        ]
+},
+"skyStriker:KagariPower": {
+        "NAME": "Kagari Effect 2",
+        "DESCRIPTIONS": [
+                "Gains 1 ATK for each Spell in your DiscardPile"
+        ]
+},
+"skyStriker:ShizukuPower": {
+        "NAME": "Shizuku Effect 2",
+        "DESCRIPTIONS": [
+                "All enemy lose 1 ATK for each Spell in your DiscardPile"
+        ]
+},
+"skyStriker:KainaPower": {
+        "NAME": "Kaina Effect 2",
+        "DESCRIPTIONS": [
+                "Each time you activate Sky Striker Spell Card, gain 1 HP"
+        ]
+},
+"skyStriker:MultiRolePower": {
+        "NAME":"MultiRole",
+        "DESCRIPTIONS": [
+                "Add Sky Striker Spells from your Discard Pile, up to the number of Sky Striker Spell Cards you activated this turn.They(It) [#ffff00]Exhaust[]"
+        ]
+},
+"skyStriker:AreaZeroPower": {
+        "NAME":"AreaZero",
+        "DESCRIPTIONS": [
+                "After Draw Phase,Discard 1, excavate the top 3 cards of your Deck add 1 excavated Sky Striker card to your hand"
+        ]
+},
+"skyStriker:HayatePower": {
+        "NAME":"Hayate",
+        "DESCRIPTIONS": [
+                "Ignore Enemy's Block.After attacking send 1 Sky Striker card from your Deck to the Discard Pile"
+        ]
+},
+"skyStriker:ChickenGamePower": {
+        "NAME": "ChickenGame",
+        "DESCRIPTIONS": [
+                "Every turn you lose 3 HP and draw 1 card"
+        ]
 }
 }

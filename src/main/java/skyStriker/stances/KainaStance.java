@@ -10,31 +10,19 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.StanceStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.stance.CalmParticleEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.powers.SkyStriker.KainaPower;
-import skyStriker.powers.SkyStriker.ShizukuPower;
-
-import java.util.Iterator;
-
-import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
-import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
 
 public class KainaStance extends AbstractStance {
-    public static final String STANCE_ID = DefaultMod.makeID(KainaStance.class.getSimpleName());
+    public static final String STANCE_ID = SkyStrikerMod.makeID(KainaStance.class.getSimpleName());
     private static final StanceStrings stanceString;
     private static long sfxId;
 

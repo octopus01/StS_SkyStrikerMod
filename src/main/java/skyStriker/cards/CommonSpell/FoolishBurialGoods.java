@@ -1,18 +1,17 @@
 package skyStriker.cards.CommonSpell;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import skyStriker.DefaultMod;
+import skyStriker.SkyStrikerMod;
 import skyStriker.actions.DeckToDiscardPileAction;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.characters.TheSkyStriker;
 
 
-import static skyStriker.DefaultMod.makeCardPath;
+import static skyStriker.SkyStrikerMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.*;
 
 public class  FoolishBurialGoods extends AbstractDynamicCard {
@@ -20,7 +19,7 @@ public class  FoolishBurialGoods extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(FoolishBurialGoods.class.getSimpleName());
+    public static final String ID = SkyStrikerMod.makeID(FoolishBurialGoods.class.getSimpleName());
     public static final String IMG = makeCardPath("FoolishBurialGoods.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -34,7 +33,7 @@ public class  FoolishBurialGoods extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
 
 
@@ -45,7 +44,6 @@ public class  FoolishBurialGoods extends AbstractDynamicCard {
     public FoolishBurialGoods() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(SpellCard);
-        this.tags.add(FieldSpellCard);
     }
 
     // Actions the card should do.

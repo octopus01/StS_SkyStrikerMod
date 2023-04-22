@@ -73,8 +73,8 @@
   "skyStriker:Engage": {
     "NAME": "闪刀起动-交闪",
     "DESCRIPTION": "检索1带有闪刀的卡片,这回合费用变0",
-    "UPGRADE_DESCRIPTION": "检索1张闪刀加入手牌,这回合费用变0 NL 抽1张牌。",
-    "EXTENDED_DESCRIPTION":["卡组中没有闪刀卡片"]
+    "UPGRADE_DESCRIPTION": "检索1张[闪刀]加入手牌,这回合费用变0 NL 抽1张牌。",
+    "EXTENDED_DESCRIPTION":["卡组中没有[闪刀]卡片"]
   },
   "skyStriker:HornetDrones": {
     "NAME": "闪刀机-黄蜂子机",
@@ -83,13 +83,13 @@
   },
   "skyStriker:Token": {
     "NAME": "闪刀姬衍生物",
-    "DESCRIPTION": "无敌。虚无。消耗。",
+    "DESCRIPTION": "检索1张[闪刀姬]加入手牌",
     "UPGRADE_DESCRIPTION": "无敌。消耗"
   },
   "skyStriker:HerculesBase": {
     "NAME": "闪刀机构-大力神基地",
     "DESCRIPTION": "下一次攻击变成2次。",
-    "UPGRADE_DESCRIPTION": "下一次攻击变成2次。 NL 抽1。"
+    "UPGRADE_DESCRIPTION": "下一次攻击变成2次。 NL 抽1张牌。"
   },
   "skyStriker:VectorBlast": {
     "NAME": "闪刀术式-爆风偏向",
@@ -150,5 +150,4 @@
     "DESCRIPTION": "从卡组把1张魔法·陷阱卡送去墓地",
     "UPGRADE_DESCRIPTION": "从卡组把1张魔法·陷阱卡送去墓地。获得1点能量"
   }
-
 }
