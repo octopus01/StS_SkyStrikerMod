@@ -28,7 +28,4 @@ public class Brick extends AbstractDynamicCard {
     public void upgrade() {
     }
 
-//    public AbstractCard makeCopy() {
-//        return new Brick();
-//    }
 }

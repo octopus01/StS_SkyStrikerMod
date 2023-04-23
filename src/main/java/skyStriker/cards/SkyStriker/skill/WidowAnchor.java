@@ -37,7 +37,7 @@ public class WidowAnchor extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-    private static final int COST =0;
+    private static final int COST =1;
 
     // /STAT DECLARATION/
 

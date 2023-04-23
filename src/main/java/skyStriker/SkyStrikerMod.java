@@ -2,18 +2,22 @@ package skyStriker;
 
 import basemod.*;
 import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.city.TheLibrary;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -349,14 +353,15 @@ public class SkyStrikerMod implements
 
         // Create a new event builder
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
-        AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
-            .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(TheSkyStriker.Enums.THE_DEFAULT) // Character specific event
-            .create();
+//        AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
+//            .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
+//            .playerClass(TheSkyStriker.Enums.THE_DEFAULT) // Character specific event
+//            .create();
 
         // Add the event
+//        BaseMod.addEvent(eventParams);
+        AddEventParams eventParams= new AddEventParams.Builder(Vampires.ID, Vampires.class).overrideEvent(TheLibrary.ID).eventType(EventUtils.EventType.FULL_REPLACE).create();
         BaseMod.addEvent(eventParams);
-
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
     }
@@ -371,7 +376,7 @@ public class SkyStrikerMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheSkyStriker.Enums.THE_DEFAULT);
+//        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheSkyStriker.Enums.THE_DEFAULT);
         
         logger.info("Done editing potions");
     }
@@ -393,18 +398,18 @@ public class SkyStrikerMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheSkyStriker.Enums.COLOR_GRAY);
+//        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
+//        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
+//        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheSkyStriker.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new SkyStrikerDefaultRelic(), TheSkyStriker.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+//        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
         
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+//        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         logger.info("Done adding relics!");
     }
     
