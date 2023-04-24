@@ -3,35 +3,25 @@ package skyStriker;
 import basemod.*;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import skyStriker.cards.*;
 import skyStriker.characters.TheSkyStriker;
-import skyStriker.events.IdentityCrisisEvent;
-import skyStriker.potions.PlaceholderPotion;
-import skyStriker.relics.BottledPlaceholderRelic;
-import skyStriker.relics.DefaultClickableRelic;
-import skyStriker.relics.PlaceholderRelic;
-import skyStriker.relics.PlaceholderRelic2;
 import skyStriker.relics.SkyStriker.SkyStrikerDefaultRelic;
 import skyStriker.util.IDCheckDontTouchPls;
 import skyStriker.util.TextureLoader;
@@ -99,8 +89,8 @@ public class SkyStrikerMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(0.0f, 131.0f, 110.0f);
-    
+    public static final Color MAGIC = CardHelper.getColor(0.0f, 131.0f, 110.0f);
+    public static final Color LINK = Color.BLUE;
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
@@ -114,16 +104,16 @@ public class SkyStrikerMod implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
   
     // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_DEFAULT_GRAY = "skyStrikerResources/images/512/bg_attack_default_green.png";
-    private static final String SKILL_DEFAULT_GRAY = "skyStrikerResources/images/512/bg_skill_default_green.png";
-    private static final String POWER_DEFAULT_GRAY = "skyStrikerResources/images/512/bg_power_default_green.png";
+    private static final String ATTACK_MAGIC = "skyStrikerResources/images/512/bg_attack_default_green.png";
+    private static final String SKILL_MAGIC = "skyStrikerResources/images/512/bg_skill_default_green.png";
+    private static final String POWER_MAGIC = "skyStrikerResources/images/512/bg_power_default_green.png";
     
     private static final String ENERGY_ORB_DEFAULT_GRAY = "skyStrikerResources/images/512/card_default_gray_orb.png";
     private static final String CARD_ENERGY_ORB = "skyStrikerResources/images/512/card_small_orb.png";
     
-    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "skyStrikerResources/images/1024/bg_attack_default_green.png";
-    private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "skyStrikerResources/images/1024/bg_skill_default_green.png";
-    private static final String POWER_DEFAULT_GRAY_PORTRAIT = "skyStrikerResources/images/1024/bg_power_default_green.png";
+    private static final String ATTACK_MAGIC_PORTRAIT = "skyStrikerResources/images/1024/bg_attack_default_green.png";
+    private static final String SKILL_MAGIC_PORTRAIT = "skyStrikerResources/images/1024/bg_skill_default_green.png";
+    private static final String POWER_MAGIC_PORTRAIT = "skyStrikerResources/images/1024/bg_power_default_green.png";
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "skyStrikerResources/images/1024/card_default_gray_orb.png";
     
     // Character assets
@@ -139,7 +129,18 @@ public class SkyStrikerMod implements
     // Atlas and JSON files for the Animations
     public static final String THE_DEFAULT_SKELETON_ATLAS = "skyStrikerResources/images/char/defaultCharacter/skeleton.atlas";
     public static final String THE_DEFAULT_SKELETON_JSON = "skyStrikerResources/images/char/defaultCharacter/skeleton.json";
-    
+
+
+    private static final String SKILL_LINK = "skyStrikerResources/images/512/bg_skill_link.png";
+    private static final String POWER_LINK = "skyStrikerResources/images/512/bg_skill_link.png";
+
+    private static final String SKILL_LINK_PORTRAIT = "skyStrikerResources/images/1024/bg_skill_link.png";
+    private static final String POWER_LINK_PORTRAIT = "skyStrikerResources/images/1024/bg_skill_link.png";
+
+
+
+
+
     // =============== MAKE IMAGE PATHS =================
     
     public static String makeCardPath(String resourcePath) {
@@ -209,10 +210,16 @@ public class SkyStrikerMod implements
         
         logger.info("Creating the color " + TheSkyStriker.Enums.COLOR_GRAY.toString());
         
-        BaseMod.addColor(TheSkyStriker.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
+        BaseMod.addColor(TheSkyStriker.Enums.COLOR_GRAY, MAGIC, MAGIC, MAGIC,
+                MAGIC, MAGIC, MAGIC, MAGIC,
+                ATTACK_MAGIC, SKILL_MAGIC, POWER_MAGIC, ENERGY_ORB_DEFAULT_GRAY,
+                ATTACK_MAGIC_PORTRAIT, SKILL_MAGIC_PORTRAIT, POWER_MAGIC_PORTRAIT,
+                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+
+        BaseMod.addColor(TheSkyStriker.Enums.COLOR_LINK, LINK, LINK, LINK,
+                LINK, LINK, LINK, LINK,
+                ATTACK_MAGIC, SKILL_LINK, POWER_LINK, ENERGY_ORB_DEFAULT_GRAY,
+                ATTACK_MAGIC_PORTRAIT, SKILL_LINK_PORTRAIT, POWER_LINK_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
         
         logger.info("Done creating the color");

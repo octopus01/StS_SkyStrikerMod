@@ -78,7 +78,7 @@
   "skyStriker:EagleBooster": {
     "NAME": "EagleBooster",
     "DESCRIPTION": "Gain !M! Artifact。",
-    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Dodge once"
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Dodge for one turn"
   },
   "skyStriker:Engage": {
     "NAME": "Engage",

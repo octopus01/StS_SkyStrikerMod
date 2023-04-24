@@ -22,7 +22,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import skyStriker.SkyStrikerMod;
-import skyStriker.cards.*;
 import skyStriker.cards.SkyStriker.attack.AfterBurner;
 import skyStriker.cards.SkyStriker.attack.ScissorsCross;
 import skyStriker.cards.SkyStriker.attack.SharkCannon;
@@ -65,6 +64,12 @@ public class TheSkyStriker extends CustomPlayer {
 
         @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+
+        @SpireEnum(name = "LINK")
+        public static AbstractCard.CardColor COLOR_LINK;
+
+        @SpireEnum(name = "LINK") @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR_LINK;
 
         @SpireEnum(name = "TRAP")
         public static AbstractCard.CardColor COLOR_TRAP;
@@ -254,7 +259,7 @@ public class TheSkyStriker extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return SkyStrikerMod.DEFAULT_GRAY;
+        return SkyStrikerMod.MAGIC;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -291,14 +296,14 @@ public class TheSkyStriker extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return SkyStrikerMod.DEFAULT_GRAY;
+        return SkyStrikerMod.MAGIC;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return SkyStrikerMod.DEFAULT_GRAY;
+        return SkyStrikerMod.MAGIC;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects

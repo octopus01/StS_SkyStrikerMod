@@ -29,7 +29,7 @@ public class Hayate extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("Hayate.png");
 
     public Hayate() {
-        super(ID, IMG, 2,  CardType.POWER,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, IMG, 2,  CardType.POWER,  TheSkyStriker.Enums.COLOR_LINK, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
         this.tags.add(SkyStriker);
         this.tags.add(SkyStrikerAce);
