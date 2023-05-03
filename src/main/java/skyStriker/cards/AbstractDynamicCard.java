@@ -2,7 +2,13 @@ package skyStriker.cards;
 
 import basemod.AutoAdd;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import skyStriker.cards.curse.Brick;
+import skyStriker.stances.HayateStance;
+
+import java.util.Objects;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
@@ -37,4 +43,10 @@ public abstract class AbstractDynamicCard extends AbstractDefaultCard {
         }
     }
 
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        if (Objects.equals(AbstractDungeon.player.stance.ID, HayateStance.STANCE_ID))
+            this.damageTypeForTurn = DamageInfo.DamageType.HP_LOSS;
+        super.calculateCardDamage(mo);
+    }
 }

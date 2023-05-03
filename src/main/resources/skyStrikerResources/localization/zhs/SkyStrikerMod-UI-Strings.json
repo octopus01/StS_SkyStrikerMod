@@ -1,0 +1,8 @@
+{
+  "skyStriker:DeckToDiscardPileAction": {
+    "TEXT": ["选择1张卡片送入墓地"]
+  },
+  "skyStriker:CheckDeckTopAndAddAction": {
+    "TEXT": ["选择的卡片不是[闪刀]"]
+  }
+}

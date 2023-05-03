@@ -50,8 +50,9 @@ public class DeckToDiscardPileAction extends AbstractGameAction {
                     card.targetDrawScale = 0.75F;
                     card.current_x = CardGroup.DRAW_PILE_X;
                     card.current_y = CardGroup.DRAW_PILE_Y;
-                    this.p.drawPile.removeCard(card);
-                    AbstractDungeon.player.discardPile.addToTop(card);
+                    this.p.drawPile.moveToDiscardPile(card);
+//                    this.p.drawPile.removeCard(card);
+//                    AbstractDungeon.player.discardPile.addToTop(card);
                 this.isDone = true;
             } else {
                 AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false);

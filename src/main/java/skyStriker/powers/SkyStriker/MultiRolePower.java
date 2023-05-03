@@ -15,7 +15,7 @@ import skyStriker.util.TextureLoader;
 
 import static skyStriker.SkyStrikerMod.makePowerPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
-import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
+import static skyStriker.cards.SkyStrikerCardTags.SSSpellCard;
 
 
 public class MultiRolePower extends AbstractPower implements CloneablePowerInterface {
@@ -55,7 +55,7 @@ public class MultiRolePower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card.hasTag(SkyStriker)&&card.hasTag(SpellCard))  {
+        if(card.hasTag(SkyStriker)&&card.hasTag(SSSpellCard))  {
             this.amount++;
         }
     }

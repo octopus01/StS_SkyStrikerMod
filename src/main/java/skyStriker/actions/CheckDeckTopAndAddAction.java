@@ -21,10 +21,12 @@ import java.util.Iterator;
 public class CheckDeckTopAndAddAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
+    public static final String[] TEXT2;
     private float startingDuration;
     AbstractCard.CardTags tags;
 
     int addNum;
+    private static final UIStrings uiStrings2;
 
     public CheckDeckTopAndAddAction(int numCards, int addNum , AbstractCard.CardTags tags) {
         this.amount = numCards;
@@ -94,7 +96,7 @@ public class CheckDeckTopAndAddAction extends AbstractGameAction {
                 else{
                     AbstractDungeon.gridSelectScreen.selectedCards.clear();
                     AbstractDungeon.effectList.add(new ThoughtBubble(
-                            AbstractDungeon.player.dialogX,  AbstractDungeon.player.dialogY, 3.0F, "选择的卡片不是闪刀", true));
+                            AbstractDungeon.player.dialogX,  AbstractDungeon.player.dialogY, 3.0F, TEXT2[0], true));
                 }
             }
             this.tickDuration();
@@ -104,5 +106,7 @@ public class CheckDeckTopAndAddAction extends AbstractGameAction {
     static {
         uiStrings = CardCrawlGame.languagePack.getUIString("BetterToHandAction");
         TEXT = uiStrings.TEXT;
+        uiStrings2 =  CardCrawlGame.languagePack.getUIString("skyStriker:CheckDeckTopAndAddAction");
+        TEXT2=uiStrings2.TEXT;
     }
 }

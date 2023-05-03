@@ -20,7 +20,7 @@ import skyStriker.stances.HayateStance;
 import java.util.Objects;
 
 import static skyStriker.SkyStrikerMod.makeCardPath;
-public class SharkCannon extends AbstractDynamicCard {
+public class SharkCannon extends SSAbstractAttackCard {
 
     // TEXT DECLARATION
 
@@ -39,10 +39,10 @@ public class SharkCannon extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 4;
 
 
@@ -51,14 +51,15 @@ public class SharkCannon extends AbstractDynamicCard {
         baseDamage = DAMAGE;
 
         this.tags.add(SkyStrikerCardTags.SkyStriker);
-        this.tags.add(SkyStrikerCardTags.SpellCard);
+        this.tags.add(SkyStrikerCardTags.SSSpellCard);
         this.isMultiDamage = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(Objects.equals(p.stance.ID, HayateStance.STANCE_ID)) damageTypeForTurn= DamageInfo.DamageType.HP_LOSS;
+        TheSkyStriker p1 = (TheSkyStriker) p;
+        p1.canAttack=false;
         for(int i=0;i<2;i++) {
             this.addToBot(new SFXAction("ATTACK_HEAVY"));
             this.addToBot(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
@@ -73,7 +74,7 @@ public class SharkCannon extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             this.upgraded = true;
-                baseDamage=12;
+                baseDamage=10;
                 this.upgradedDamage = true;
 //            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
@@ -82,7 +83,7 @@ public class SharkCannon extends AbstractDynamicCard {
     public void downgrade(){
         if(upgraded){
             upgraded=false;
-            baseDamage=8;
+            baseDamage=7;
             this.upgradedDamage = false;
             initializeDescription();
         }

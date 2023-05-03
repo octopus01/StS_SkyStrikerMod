@@ -7,7 +7,7 @@ public class SkyStrikerCardTags {
         @SpireEnum
         public static AbstractCard.CardTags SkyStriker;
         @SpireEnum
-        public static AbstractCard.CardTags SpellCard;
+        public static AbstractCard.CardTags SSSpellCard;
         @SpireEnum
         public static AbstractCard.CardTags FieldSpellCard;
         @SpireEnum

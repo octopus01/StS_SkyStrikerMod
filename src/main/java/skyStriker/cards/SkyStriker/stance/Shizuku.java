@@ -28,17 +28,17 @@ public class Shizuku extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("Shizuku.png");
 
     public Shizuku() {
-        super(ID, IMG, 2, CardType.POWER,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.RARE, CardTarget.SELF);
+        super(ID, IMG, 1, CardType.POWER,  TheSkyStriker.Enums.COLOR_LINK, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        this.tags.add(SkyStriker);
+        this.isEthereal=true;
         this.tags.add(SkyStrikerAce);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
-//        this.addToBot(new TagFromDiscardPileToHandAction(1,SkyStriker));
         this.addToBot(new ApplyPowerAction(p, p, new ShizukuPower(p, 1), 1));
         this.addToBot(new ChangeStanceAction(new ShizukuStance()));
+        TheSkyStriker p1 = (TheSkyStriker) p;
+        p1.canAttack=true;
     }
 
 
@@ -49,9 +49,6 @@ public class Shizuku extends AbstractDynamicCard {
         }
     }
 
-//    public AbstractCard makeCopy() {
-//        return new Shizuku();
-//    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

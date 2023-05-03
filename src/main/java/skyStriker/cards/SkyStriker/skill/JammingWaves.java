@@ -31,7 +31,7 @@ public class JammingWaves extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 1;
@@ -48,7 +48,7 @@ public class JammingWaves extends AbstractDynamicCard {
         baseDamage = 5;
         this.tags.add(CardTags.STARTER_DEFEND);
         this.tags.add(SkyStrikerCardTags.SkyStriker);
-        this.tags.add(SkyStrikerCardTags.SpellCard);
+        this.tags.add(SkyStrikerCardTags.SSSpellCard);
     }
 
     // Actions the card should do.

@@ -1,5 +1,0 @@
-{
-  "skyStriker:DeckToDiscardPileAction": {
-    "TEXT":["select 1 card and send it to Discard Pile"]
-  }
-}

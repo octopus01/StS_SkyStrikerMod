@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DefaultMod" />
-        <module name="theDefault" />
+        <module name="skyStrikerMod" />
       </profile>
     </annotationProcessing>
   </component>

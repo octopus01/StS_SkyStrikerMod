@@ -27,15 +27,17 @@ public class Kagari extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("Kagari.png");
 
     public Kagari() {
-        super(ID, IMG, 2,  CardType.POWER,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.RARE, CardTarget.SELF);
+        super(ID, IMG, 1,  CardType.POWER,  TheSkyStriker.Enums.COLOR_LINK, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        this.tags.add(SkyStriker);
+        this.isEthereal=true;
         this.tags.add(SkyStrikerAce);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new TagFromDiscardPileToHandAction(1,SkyStriker,0));
         this.addToBot(new ChangeStanceAction(new KagariStance()));
+        TheSkyStriker p1 = (TheSkyStriker) p;
+        p1.canAttack=true;
     }
 
 

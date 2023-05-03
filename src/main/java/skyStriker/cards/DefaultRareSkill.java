@@ -37,7 +37,7 @@ public class DefaultRareSkill extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 1;
 

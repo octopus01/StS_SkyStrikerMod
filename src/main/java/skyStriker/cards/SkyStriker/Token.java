@@ -1,11 +1,14 @@
 package skyStriker.cards.SkyStriker;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import skyStriker.SkyStrikerMod;
-import skyStriker.actions.tagFromDeckToHandAction;
+import skyStriker.actions.RmFromPlayAction;
+import skyStriker.actions.TagFromExtraDeckToHandAction;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
@@ -28,7 +31,7 @@ public class Token extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 0;
 
@@ -49,8 +52,12 @@ public class Token extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-//            this.addToBot(new ApplyPowerAction(p, p, new SubstitutePower(p, 1), 1));
-        this.addToBot(new tagFromDeckToHandAction(1,SkyStrikerCardTags.SkyStrikerAce));
+        if(upgraded){
+            this.addToBot(new TagFromExtraDeckToHandAction(1,SkyStrikerCardTags.SkyStrikerAce,1));
+            this.addToBot(new GainBlockAction(p,4));
+        }
+        else
+            this.addToBot(new TagFromExtraDeckToHandAction(1,SkyStrikerCardTags.SkyStrikerAce,1));
     }
 
     //Upgraded stats.

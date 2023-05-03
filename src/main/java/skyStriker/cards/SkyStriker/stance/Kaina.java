@@ -27,9 +27,9 @@ public class Kaina extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(action);
     }
     public Kaina() {
-        super(ID,  IMG, 2, CardType.POWER,  TheSkyStriker.Enums.COLOR_GRAY, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID,  IMG, 1, CardType.POWER,  TheSkyStriker.Enums.COLOR_LINK, CardRarity.RARE, CardTarget.ENEMY);
         this.exhaust = true;
-        this.tags.add(SkyStriker);
+        this.isEthereal=true;
         this.tags.add(SkyStrikerAce);
     }
 
@@ -37,6 +37,8 @@ public class Kaina extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -99), -99));
         this.addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, 99), 99, true, AbstractGameAction.AttackEffect.NONE));
         this.addToBot(new ChangeStanceAction(new KainaStance()));
+        TheSkyStriker p1 = (TheSkyStriker) p;
+        p1.canAttack=true;
     }
 
 

@@ -30,7 +30,7 @@ public class EagleBooster extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 1;
 
@@ -45,7 +45,7 @@ public class EagleBooster extends AbstractDynamicCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(SkyStrikerCardTags.SkyStriker);
-        this.tags.add(SkyStrikerCardTags.SpellCard);
+        this.tags.add(SkyStrikerCardTags.SSSpellCard);
     }
 
     // Actions the card should do.

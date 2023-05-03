@@ -13,7 +13,7 @@ import skyStriker.powers.SkyStriker.AreaZeroPower;
 
 import static skyStriker.SkyStrikerMod.makeCardPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
-import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
+import static skyStriker.cards.SkyStrikerCardTags.SSSpellCard;
 
 public class  AreaZero extends AbstractDynamicCard {
 
@@ -32,7 +32,7 @@ public class  AreaZero extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 1;
 
@@ -45,7 +45,7 @@ public class  AreaZero extends AbstractDynamicCard {
     public AreaZero() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(SkyStriker);
-        this.tags.add(SpellCard);
+        this.tags.add(SSSpellCard);
     }
 
     // Actions the card should do.

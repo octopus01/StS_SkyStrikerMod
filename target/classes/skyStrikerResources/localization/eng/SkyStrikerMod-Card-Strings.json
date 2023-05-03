@@ -1,0 +1,179 @@
+{
+  "skyStriker:CannotUse": {
+    "EXTENDED_DESCRIPTION": ["One form can only attack once"]
+  },
+  "skyStriker:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "skyStriker:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL thedefault:Multiword_Keyword."
+  },
+  "skyStriker:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! thedefault:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! thedefault:Keywords."
+  },
+  "skyStriker:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "skyStriker:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "skyStriker:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X thedefault:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 thedefault:Keywords."
+  },
+  "skyStriker:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "skyStriker:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "skyStriker:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "skyStriker:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !skyStriker:ENERGY_DAMAGE! damage total.)"
+  },
+  "skyStriker:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !skyStriker:SecondMagic! poison to an enemy."
+  },
+  "skyStriker:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "skyStriker:AfterBurner": {
+    "NAME": "Afterburners!",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! block"
+  },
+  "skyStriker:JammingWaves": {
+    "NAME": "JammingWaves!",
+    "DESCRIPTION": "Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Reflect 4 damage. NL Gain !B! block"
+  },
+  "skyStriker:PotOfGreed": {
+    "NAME": "Pot of Greed",
+    "DESCRIPTION": "Draw 2. NL [#ffff00]Exhaust[]",
+    "UPGRADE_DESCRIPTION": "Draw 2."
+  },
+  "skyStriker:GracefulCharity": {
+    "NAME": "Graceful Charity",
+    "DESCRIPTION": "Draw 3 and Discard 2. NL [#ffff00]Exhaust[]",
+    "UPGRADE_DESCRIPTION": "Draw 3 and Discard 2."
+  },
+  "skyStriker:WidowAnchor": {
+    "NAME": "Widow Anchor",
+    "DESCRIPTION": "Apply !M! [#ffff00]Weak[]。",
+    "UPGRADE_DESCRIPTION": "Enemy NL lose !M! Strength for 1 turn。 NL Apply !M! [#ffff00]Weak[]。"
+  },
+  "skyStriker:EagleBooster": {
+    "NAME": "EagleBooster",
+    "DESCRIPTION": "Gain !M! Artifact。",
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Dodge for one turn"
+  },
+  "skyStriker:Engage": {
+    "NAME": "Engage",
+    "DESCRIPTION": "Add 1 \"Sky Striker\" Card from deck.It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Add 1 \"Sky Striker\" Card from deck.It costs 0 this turn. NL Draw 1",
+    "EXTENDED_DESCRIPTION":["No \"Sky Striker\" card in your deck"]
+  },
+  "skyStriker:HornetDrones": {
+    "NAME": "HornetDrones",
+    "DESCRIPTION": "Add 1 Sky Striker Ace Token",
+    "UPGRADE_DESCRIPTION": "Add 1 Sky Striker Ace Token+"
+  },
+  "skyStriker:Token": {
+    "NAME": "Sky Striker Ace Token",
+    "DESCRIPTION": "Add 1 Sky Striker Ace Card from deck. NL [#ffff00]Exhaust[]",
+    "UPGRADE_DESCRIPTION": "Add 1 Sky Striker Ace Card from deck. NL [#ffff00]Exhaust[]"
+  },
+  "skyStriker:HerculesBase": {
+    "NAME": "HerculesBase",
+    "DESCRIPTION": "This turn, your next Attack is played twice",
+    "UPGRADE_DESCRIPTION": "This turn, your next Attack is played twice. NL Draw 1"
+  },
+  "skyStriker:VectorBlast": {
+    "NAME": "VectorBlast",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies"
+  },
+  "skyStriker:ScissorsCross": {
+    "NAME": "ScissorsCross",
+    "DESCRIPTION": "Deal !D! damage to random enemies twice"
+  },
+  "skyStriker:SharkCannon": {
+    "NAME": "SharkCannon",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice"
+  },
+  "skyStriker:Kaina": {
+    "NAME": "Kaina",
+    "DESCRIPTION": "[#000000]Enemy [#000000]cannot [#000000]attack [#000000]until [#000000]the [#000000]end [#000000]of [#000000]turn.[] NL [#000000]Enter [#adad76]Kaina[]"
+  },
+  "skyStriker:Kagari": {
+    "NAME": "Kagari",
+    "DESCRIPTION": "[#000000]Add [#000000]1 [#000000]\"Sky [#000000]Striker\" [#000000]Spell [#000000]from  [#000000]discardPile. NL [#000000]Enter [#c74832]Kagari[]"
+  },
+  "skyStriker:Shizuku": {
+    "NAME": "Shizuku",
+    "DESCRIPTION": "[#000000]Add [#000000]1 [#000000]\"Sky [#000000]Striker\" [#000000]Spell [#000000]from [#000000]deck [#000000]at [#000000]the [#000000]end [#000000]of [#000000]this [#000000]turn.[] NL [#000000]Enter [#32b8c7]Shizuku[]"
+  },
+  "skyStriker:Hayate": {
+    "NAME": "Hayate",
+    "DESCRIPTION": "[#000000]Enter[] [#32c750]Hayate[]"
+  },
+  "skyStriker:MultiRole": {
+    "NAME": "MultiRole",
+    "DESCRIPTION": "Add \"Sky Striker\" Spells from your Discard Pile, up to the number of \"Sky Striker\" Spell Cards you activated this turn.They [#ffff00]Exhaust[]"
+  },
+  "skyStriker:AreaZero": {
+    "NAME": "AreaZero",
+    "DESCRIPTION": "After Draw Phase,Discard 1, excavate the top 3 cards of your Deck add 1 excavated \"Sky Striker\" card to your hand"
+  },
+  "skyStriker:ChickenGame": {
+    "NAME": "ChickenGame",
+    "DESCRIPTION": "Every turn you lose 3 HP and draw 1 card",
+    "UPGRADE_DESCRIPTION": "Every turn you lose 3 HP and draw 1.Draw 1"
+  },
+  "skyStriker:Brick": {
+    "NAME": "Brick",
+    "DESCRIPTION": "You brick"
+  },
+  "skyStriker:FoolishBurialGoods": {
+    "NAME": "FoolishBurialGoods",
+    "DESCRIPTION": "Send 1 Spell/Trap from your Deck to the Discard Pile.",
+    "UPGRADE_DESCRIPTION": "Send 1 Spell/Trap from your Deck to the Discard Pile.gain 1 [G]"
+  },
+  "skyStriker:Raigeki": {
+    "NAME": "Raigeki",
+    "DESCRIPTION": "Deal !D! damage to all enemies"
+  },
+  "skyStriker:UpstartGoblin": {
+    "NAME": "UpstartGoblin",
+    "DESCRIPTION": "Draw 1. NL Enemy heal !M! HP"
+  },
+  "skyStriker:Linkage": {
+    "NAME": "Linkage!",
+    "DESCRIPTION": "Discard 1 and add 1 \"Sky Striker Ace\" from Extra Deck.",
+    "UPGRADE_DESCRIPTION": "Discard 1 and add 1 \"Sky Striker Ace\" from Extra Deck. NL Gain 3 Strength",
+    "EXTENDED_DESCRIPTION" : ["No \"Sky Striker Ace\" in your Ex Deck"]
+  },
+  "skyStriker:RedArrows": {
+    "NAME": "RedArrows",
+    "DESCRIPTION": "Deal !D! damage twice"
+  },
+  "skyStriker:BlackHole": {
+    "NAME": "BlackHole",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Deal 10 damage to yourself"
+  }
+}

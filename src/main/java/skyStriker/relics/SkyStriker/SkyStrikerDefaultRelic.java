@@ -10,14 +10,21 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import skyStriker.SkyStrikerMod;
 import skyStriker.actions.SkyStrikerDowngradeAction;
 import skyStriker.actions.SkyStrikerUpgradeAction;
+import skyStriker.cards.SkyStriker.stance.Hayate;
+import skyStriker.cards.SkyStriker.stance.Kagari;
+import skyStriker.cards.SkyStriker.stance.Kaina;
+import skyStriker.cards.SkyStriker.stance.Shizuku;
+import skyStriker.characters.TheSkyStriker;
 import skyStriker.util.TextureLoader;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import static skyStriker.SkyStrikerMod.makeRelicOutlinePath;
 import static skyStriker.SkyStrikerMod.makeRelicPath;
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
-import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
+import static skyStriker.cards.SkyStrikerCardTags.SSSpellCard;
 
 public class SkyStrikerDefaultRelic extends CustomRelic {
 
@@ -37,6 +44,7 @@ public class SkyStrikerDefaultRelic extends CustomRelic {
     public SkyStrikerDefaultRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
+
 
     public void atTurnStart() {
         this.flash();
@@ -69,7 +77,7 @@ public class SkyStrikerDefaultRelic extends CustomRelic {
         Iterator var2 = p.discardPile.group.iterator();
         while (var2.hasNext()) {
             AbstractCard c = (AbstractCard) var2.next();
-            if (c.hasTag(SkyStriker) && c.hasTag(SpellCard)) {
+            if (c.hasTag(SkyStriker) && c.hasTag(SSSpellCard)) {
                 i++;
             }
         }

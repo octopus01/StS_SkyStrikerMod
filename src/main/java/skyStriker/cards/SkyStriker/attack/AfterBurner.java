@@ -18,7 +18,7 @@ import skyStriker.stances.HayateStance;
 import java.util.Objects;
 
 import static skyStriker.SkyStrikerMod.makeCardPath;
-public class AfterBurner extends AbstractDynamicCard {
+public class AfterBurner extends SSAbstractAttackCard {
 
     // TEXT DECLARATION
 
@@ -38,7 +38,7 @@ public class AfterBurner extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 1;
     private static final int DAMAGE = 8;
@@ -55,21 +55,19 @@ public class AfterBurner extends AbstractDynamicCard {
         this.tags.add(CardTags.STARTER_STRIKE); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
         this.tags.add(CardTags.STRIKE);
         this.tags.add(SkyStrikerCardTags.SkyStriker);
-        this.tags.add(SkyStrikerCardTags.SpellCard);
+        this.tags.add(SkyStrikerCardTags.SSSpellCard);
 
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(Objects.equals(p.stance.ID, HayateStance.STANCE_ID)) damageTypeForTurn= DamageInfo.DamageType.HP_LOSS;
+        TheSkyStriker p1 = (TheSkyStriker) p;
+        p1.canAttack=false;
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new WaitAction(0.1F));
         if(upgraded) this.addToBot(new GainBlockAction(p, p, this.block));
-//        if (p != null && m != null) {
-//            this.addToBot(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
-//        }
 
     }
     // Upgraded stats.
@@ -77,7 +75,7 @@ public class AfterBurner extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
 //            upgradeName();
-            baseDamage=10;
+            baseDamage=8;
             this.upgraded=true;
             this.upgradedDamage = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
@@ -89,7 +87,7 @@ public class AfterBurner extends AbstractDynamicCard {
     public void downgrade(){
         if(upgraded){
             super.downgrade();
-            baseDamage=8;
+            baseDamage=10;
             this.upgradedDamage = false;
         }
     }

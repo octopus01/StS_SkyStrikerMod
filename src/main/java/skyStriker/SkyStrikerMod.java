@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -20,13 +21,13 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import skyStriker.UI.ExtraDeckTopPanel;
 import skyStriker.cards.*;
 import skyStriker.characters.TheSkyStriker;
 import skyStriker.relics.SkyStriker.SkyStrikerDefaultRelic;
+import skyStriker.UI.screen.SSExtraDeckScreen;
 import skyStriker.util.IDCheckDontTouchPls;
 import skyStriker.util.TextureLoader;
-import skyStriker.variables.DefaultCustomVariable;
-import skyStriker.variables.DefaultSecondMagicNumber;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -69,7 +70,10 @@ public class SkyStrikerMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        PostPlayerUpdateSubscriber,
+        PostDungeonInitializeSubscriber,
+        PreStartGameSubscriber{
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(SkyStrikerMod.class.getName());
@@ -89,7 +93,7 @@ public class SkyStrikerMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color MAGIC = CardHelper.getColor(0.0f, 131.0f, 110.0f);
+    public static final Color SPELL = CardHelper.getColor(0.0f, 131.0f, 110.0f);
     public static final Color LINK = Color.BLUE;
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -104,10 +108,13 @@ public class SkyStrikerMod implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
   
     // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_MAGIC = "skyStrikerResources/images/512/bg_attack_default_green.png";
-    private static final String SKILL_MAGIC = "skyStrikerResources/images/512/bg_skill_default_green.png";
-    private static final String POWER_MAGIC = "skyStrikerResources/images/512/bg_power_default_green.png";
-    
+//    private static final String ATTACK_SPELL = "skyStrikerResources/images/512/bg_attack_default_green.png";
+    private static final String ATTACK_SPELL = "skyStrikerResources/images/512/bg_skill_spell.png";
+//    private static final String SKILL_SPELL = "skyStrikerResources/images/512/bg_skill_default_green.png";
+    private static final String SKILL_SPELL = "skyStrikerResources/images/512/bg_skill_spell.png";
+//    private static final String POWER_SPELL = "skyStrikerResources/images/512/bg_power_default_green.png";
+    private static final String POWER_SPELL = "skyStrikerResources/images/512/bg_skill_spell.png";
+
     private static final String ENERGY_ORB_DEFAULT_GRAY = "skyStrikerResources/images/512/card_default_gray_orb.png";
     private static final String CARD_ENERGY_ORB = "skyStrikerResources/images/512/card_small_orb.png";
     
@@ -208,17 +215,17 @@ public class SkyStrikerMod implements
         
         logger.info("Done subscribing");
         
-        logger.info("Creating the color " + TheSkyStriker.Enums.COLOR_GRAY.toString());
+        logger.info("Creating the color " + TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR.toString());
         
-        BaseMod.addColor(TheSkyStriker.Enums.COLOR_GRAY, MAGIC, MAGIC, MAGIC,
-                MAGIC, MAGIC, MAGIC, MAGIC,
-                ATTACK_MAGIC, SKILL_MAGIC, POWER_MAGIC, ENERGY_ORB_DEFAULT_GRAY,
+        BaseMod.addColor(TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR, SPELL, SPELL, SPELL,
+                SPELL, SPELL, SPELL, SPELL,
+                ATTACK_SPELL, SKILL_SPELL, POWER_SPELL, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_MAGIC_PORTRAIT, SKILL_MAGIC_PORTRAIT, POWER_MAGIC_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
 
         BaseMod.addColor(TheSkyStriker.Enums.COLOR_LINK, LINK, LINK, LINK,
                 LINK, LINK, LINK, LINK,
-                ATTACK_MAGIC, SKILL_LINK, POWER_LINK, ENERGY_ORB_DEFAULT_GRAY,
+                ATTACK_SPELL, SKILL_LINK, POWER_LINK, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_MAGIC_PORTRAIT, SKILL_LINK_PORTRAIT, POWER_LINK_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
         
@@ -230,7 +237,7 @@ public class SkyStrikerMod implements
         // The actual mod Button is added below in receivePostInitialize()
         theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
         try {
-            SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
+            SpireConfig config = new SpireConfig("SkyStrikerMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
             // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
             config.load(); // Load the setting and set the boolean to equal it
             enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
@@ -287,8 +294,9 @@ public class SkyStrikerMod implements
     
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
-        SkyStrikerMod defaultmod = new SkyStrikerMod();
+        SkyStrikerMod SkyStrikerMod = new SkyStrikerMod();
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
+
     }
     
     // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
@@ -298,13 +306,14 @@ public class SkyStrikerMod implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheSkyStriker.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + TheSkyStriker.Enums.SKY_STRIKER.toString());
         
-        BaseMod.addCharacter(new TheSkyStriker("sky striker raye", TheSkyStriker.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheSkyStriker.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new TheSkyStriker("sky striker raye", TheSkyStriker.Enums.SKY_STRIKER),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheSkyStriker.Enums.SKY_STRIKER);
         
         receiveEditPotions();
-        logger.info("Added " + TheSkyStriker.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + TheSkyStriker.Enums.SKY_STRIKER.toString());
+
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -333,7 +342,7 @@ public class SkyStrikerMod implements
             enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
             try {
                 // And based on that boolean, set the settings and save them
-                SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
+                SpireConfig config = new SpireConfig("SkyStrikerMod", "theDefaultConfig", theDefaultDefaultSettings);
                 config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
                 config.save();
             } catch (Exception e) {
@@ -345,7 +354,10 @@ public class SkyStrikerMod implements
         
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-        
+        BaseMod.addTopPanelItem(new ExtraDeckTopPanel());
+        logger.info("Done loading top panel");
+        BaseMod.addCustomScreen(new SSExtraDeckScreen());
+        logger.info("Done loading ex Deck Screen");
         // =============== EVENTS =================
         // https://github.com/daviscook477/BaseMod/wiki/Custom-Events
 
@@ -367,10 +379,9 @@ public class SkyStrikerMod implements
 
         // Add the event
 //        BaseMod.addEvent(eventParams);
-        AddEventParams eventParams= new AddEventParams.Builder(Vampires.ID, Vampires.class).overrideEvent(TheLibrary.ID).eventType(EventUtils.EventType.FULL_REPLACE).create();
-        BaseMod.addEvent(eventParams);
-        // =============== /EVENTS/ =================
-        logger.info("Done loading badge Image and mod options");
+
+
+
     }
     
     // =============== / POST-INITIALIZE/ =================
@@ -408,7 +419,7 @@ public class SkyStrikerMod implements
 //        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
 //        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheSkyStriker.Enums.COLOR_GRAY);
 //        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheSkyStriker.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new SkyStrikerDefaultRelic(), TheSkyStriker.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new SkyStrikerDefaultRelic(), TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
 //        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -433,8 +444,8 @@ public class SkyStrikerMod implements
         // Add the Custom Dynamic Variables
         logger.info("Add variables");
         // Add the Custom Dynamic variables
-        BaseMod.addDynamicVariable(new DefaultCustomVariable());
-        BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
+//        BaseMod.addDynamicVariable(new DefaultCustomVariable());
+//        BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         
         logger.info("Adding cards");
         // Add the cards
@@ -488,15 +499,15 @@ public class SkyStrikerMod implements
     }
 
     private void loadLocFiles(Settings.GameLanguage language) {
-        BaseMod.loadCustomStringsFile(CardStrings.class, makeLocPath(language, "DefaultMod-Card-Strings"));
-        BaseMod.loadCustomStringsFile(EventStrings.class, makeLocPath(language, "DefaultMod-Event-Strings"));
-        BaseMod.loadCustomStringsFile(RelicStrings.class, makeLocPath(language, "DefaultMod-Relic-Strings"));
-        BaseMod.loadCustomStringsFile(PowerStrings.class, makeLocPath(language, "DefaultMod-Power-Strings"));
-        BaseMod.loadCustomStringsFile(CharacterStrings.class, makeLocPath(language, "DefaultMod-Character-Strings"));
-        BaseMod.loadCustomStringsFile(OrbStrings.class, makeLocPath(language, "DefaultMod-Orb-Strings"));
-        BaseMod.loadCustomStringsFile(PotionStrings.class, makeLocPath(language, "DefaultMod-Potion-Strings"));
-        BaseMod.loadCustomStringsFile(StanceStrings.class,makeLocPath(language,"DefaultMod-Stance-Strings"));
-        BaseMod.loadCustomStringsFile(UIStrings.class,makeLocPath(language,"DefaultMod-UI-Strings"));
+        BaseMod.loadCustomStringsFile(CardStrings.class, makeLocPath(language, "SkyStrikerMod-Card-Strings"));
+        BaseMod.loadCustomStringsFile(EventStrings.class, makeLocPath(language, "SkyStrikerMod-Event-Strings"));
+        BaseMod.loadCustomStringsFile(RelicStrings.class, makeLocPath(language, "SkyStrikerMod-Relic-Strings"));
+        BaseMod.loadCustomStringsFile(PowerStrings.class, makeLocPath(language, "SkyStrikerMod-Power-Strings"));
+        BaseMod.loadCustomStringsFile(CharacterStrings.class, makeLocPath(language, "SkyStrikerMod-Character-Strings"));
+        BaseMod.loadCustomStringsFile(OrbStrings.class, makeLocPath(language, "SkyStrikerMod-Orb-Strings"));
+        BaseMod.loadCustomStringsFile(PotionStrings.class, makeLocPath(language, "SkyStrikerMod-Potion-Strings"));
+        BaseMod.loadCustomStringsFile(StanceStrings.class,makeLocPath(language,"SkyStrikerMod-Stance-Strings"));
+        BaseMod.loadCustomStringsFile(UIStrings.class,makeLocPath(language,"SkyStrikerMod-UI-Strings"));
     }
     @Override
     public void receiveEditStrings() {
@@ -508,31 +519,31 @@ public class SkyStrikerMod implements
                 loadLocFiles(Settings.language);
 //        // CardStrings
 //        BaseMod.loadCustomStringsFile(CardStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
+//                getModID() + "Resources/localization/eng/SkyStrikerMod-Card-Strings.json");
 //
 //        // PowerStrings
 //        BaseMod.loadCustomStringsFile(PowerStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
+//                getModID() + "Resources/localization/eng/SkyStrikerMod-Power-Strings.json");
 //
 //        // RelicStrings
 //        BaseMod.loadCustomStringsFile(RelicStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Relic-Strings.json");
+//                getModID() + "Resources/localization/eng/SkyStrikerMod-Relic-Strings.json");
 //
 //        // Event Strings
 //        BaseMod.loadCustomStringsFile(EventStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Event-Strings.json");
+//                getModID() + "Resources/localization/eng/SkyStrikerMod-Event-Strings.json");
 //
 //        // PotionStrings
 //        BaseMod.loadCustomStringsFile(PotionStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Potion-Strings.json");
+//                getModID() + "Resources/localization/eng/SkyStrikerMod-Potion-Strings.json");
 //
 //        // CharacterStrings
 //        BaseMod.loadCustomStringsFile(CharacterStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Character-Strings.json");
+//                getModID() + "Resources/localization/eng/SkyStrikerMod-Character-Strings.json");
 //
 //        // OrbStrings
 //        BaseMod.loadCustomStringsFile(OrbStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
+//                getModID() + "Resources/localization/eng/SkyStrikerMod-Orb-Strings.json");
 //
          logger.info("Done edittting strings");
     }
@@ -552,7 +563,7 @@ public class SkyStrikerMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
         
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/SkyStrikerMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
         
         if (keywords != null) {
@@ -570,6 +581,39 @@ public class SkyStrikerMod implements
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }
+
+    @Override
+    public void receivePostPlayerUpdate() {
+        if(AbstractDungeon.player instanceof TheSkyStriker) {
+            SkyStrikerCardGroup skyStrikerCardGroup = new SkyStrikerCardGroup();
+            BaseMod.addSaveField("extraDeck", skyStrikerCardGroup);
+        }
+    }
+
+    @Override
+    public void receivePostDungeonInitialize() {
+        if(AbstractDungeon.player instanceof TheSkyStriker) {
+            AddEventParams eventParams= new AddEventParams.Builder(Vampires.ID, Vampires.class).overrideEvent(TheLibrary.ID).eventType(EventUtils.EventType.FULL_REPLACE).create();
+            BaseMod.addEvent(eventParams);
+
+            logger.info("Done loading badge Image and mod options");
+            //===================Custom Top Panel Items=========================
+        }
+    }
+
+    @Override
+    public void receivePreStartGame() {
+        if(AbstractDungeon.player instanceof TheSkyStriker) {
+            SkyStrikerCardGroup skyStrikerCardGroup = new SkyStrikerCardGroup();
+            BaseMod.addSaveField("extraDeck", skyStrikerCardGroup);
+            // =============== /EVENTS/ =================
+            AddEventParams eventParams= new AddEventParams.Builder(Vampires.ID, Vampires.class).overrideEvent(TheLibrary.ID).eventType(EventUtils.EventType.FULL_REPLACE).create();
+            BaseMod.addEvent(eventParams);
+
+            logger.info("Done loading badge Image and mod options");
+        }
+    }
+
 
     //ADD TAGS
 

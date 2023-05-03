@@ -25,7 +25,7 @@ import skyStriker.powers.SkyStriker.ShizukuPower;
 import java.util.Iterator;
 
 import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
-import static skyStriker.cards.SkyStrikerCardTags.SpellCard;
+import static skyStriker.cards.SkyStrikerCardTags.SSSpellCard;
 
 public class ShizukuStance extends AbstractStance {
     public static final String STANCE_ID = SkyStrikerMod.makeID(ShizukuStance.class.getSimpleName());;
@@ -72,7 +72,7 @@ public class ShizukuStance extends AbstractStance {
         Iterator var2 = AbstractDungeon.player.discardPile.group.iterator();
         while (var2.hasNext()) {
             AbstractCard c = (AbstractCard) var2.next();
-            if (c.hasTag(SkyStriker) && c.hasTag(SpellCard)) {
+            if (c.hasTag(SkyStriker) && c.hasTag(SSSpellCard)) {
                 i++;
             }
         }

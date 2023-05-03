@@ -29,9 +29,9 @@ public class Hayate extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("Hayate.png");
 
     public Hayate() {
-        super(ID, IMG, 2,  CardType.POWER,  TheSkyStriker.Enums.COLOR_LINK, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, IMG, 1,  CardType.POWER,  TheSkyStriker.Enums.COLOR_LINK, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        this.tags.add(SkyStriker);
+        this.isEthereal=true;
         this.tags.add(SkyStrikerAce);
     }
 
@@ -39,6 +39,8 @@ public class Hayate extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,
                 new HayatePower(AbstractDungeon.player, 0), 0));
         this.addToBot(new ChangeStanceAction(new HayateStance()));
+        TheSkyStriker p1 = (TheSkyStriker) p;
+        p1.canAttack=true;
     }
 
 
@@ -50,9 +52,6 @@ public class Hayate extends AbstractDynamicCard {
 
     }
 
-//    public AbstractCard makeCopy() {
-//        return new Hayate();
-//    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

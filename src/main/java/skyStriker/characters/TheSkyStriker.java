@@ -9,6 +9,8 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -22,24 +24,27 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import skyStriker.SkyStrikerMod;
+import skyStriker.cards.commonSpell.FoolishBurialGoods;
+import skyStriker.cards.commonSpell.UpstartGoblin;
 import skyStriker.cards.SkyStriker.attack.AfterBurner;
-import skyStriker.cards.SkyStriker.attack.ScissorsCross;
-import skyStriker.cards.SkyStriker.attack.SharkCannon;
 import skyStriker.cards.SkyStriker.attack.VectorBlast;
 import skyStriker.cards.SkyStriker.power.AreaZero;
-import skyStriker.cards.SkyStriker.skill.HerculesBase;
 import skyStriker.cards.SkyStriker.power.MultiRole;
 import skyStriker.cards.SkyStriker.skill.*;
 import skyStriker.cards.SkyStriker.stance.Hayate;
 import skyStriker.cards.SkyStriker.stance.Kagari;
 import skyStriker.cards.SkyStriker.stance.Kaina;
 import skyStriker.cards.SkyStriker.stance.Shizuku;
+import skyStriker.cards.SkyStrikerCardGroup;
 import skyStriker.relics.SkyStriker.SkyStrikerDefaultRelic;
+import skyStriker.stances.HayateStance;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 import static skyStriker.SkyStrikerMod.*;
-import static skyStriker.characters.TheSkyStriker.Enums.COLOR_GRAY;
+import static skyStriker.characters.TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -47,6 +52,12 @@ import static skyStriker.characters.TheSkyStriker.Enums.COLOR_GRAY;
 
 public class TheSkyStriker extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(SkyStrikerMod.class.getName());
+
+    public  CardGroup extraDeck;
+    public  CardGroup extraDeckMaster;
+
+    public boolean canAttack=true;
+
 
     // =============== CHARACTER ENUMERATORS =================
     // These are enums for your Characters color (both general color and for the card library) as well as
@@ -57,18 +68,18 @@ public class TheSkyStriker extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_DEFAULT;
+        public static AbstractPlayer.PlayerClass SKY_STRIKER;
 
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_GRAY;
+        @SpireEnum(name = "SKY_STRIKER_DEFAULT_COLOR") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor SKY_STRIKER_DEFAULT_COLOR;
 
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "SKY_STRIKER_DEFAULT_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
 
-        @SpireEnum(name = "LINK")
+        @SpireEnum(name = "SKY_STRIKER_LINK")
         public static AbstractCard.CardColor COLOR_LINK;
 
-        @SpireEnum(name = "LINK") @SuppressWarnings("unused")
+        @SpireEnum(name = "SKY_STRIKER_LINK") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR_LINK;
 
         @SpireEnum(name = "TRAP")
@@ -161,6 +172,9 @@ public class TheSkyStriker extends CustomPlayer {
 
         // =============== /TEXT BUBBLE LOCATION/ =================
 
+        extraDeck = new CardGroup(SkyStrikerCardGroup.ExtraDeck);
+
+        extraDeckMaster = new CardGroup(SkyStrikerCardGroup.ExtraDeckMaster);
     }
 
     // =============== /CHARACTER CLASS END/ =================
@@ -179,7 +193,6 @@ public class TheSkyStriker extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         logger.info("Begin loading starter Deck Strings");
-//        for(int i=0;i<4;i++)
 
         for(int i=0;i<3;i++) {
             retVal.add(AfterBurner.ID);
@@ -187,24 +200,13 @@ public class TheSkyStriker extends CustomPlayer {
         for(int i=0;i<3;i++) {
             retVal.add(JammingWaves.ID);
         }
-//        retVal.add(PotOfGreed.ID);
-//        retVal.add(GracefulCharity.ID);
         retVal.add(WidowAnchor.ID);
-        retVal.add(EagleBooster.ID);
-//        retVal.add("Apotheosis");
-        retVal.add(Engage.ID);
         retVal.add(HornetDrones.ID);
-        retVal.add(VectorBlast.ID);
-        retVal.add(ScissorsCross.ID);
-        retVal.add(SharkCannon.ID);
-        retVal.add(HerculesBase.ID);
-        retVal.add(Kagari.ID);
-        retVal.add(Shizuku.ID);
-        retVal.add(Kaina.ID);
-        retVal.add(MultiRole.ID);
         retVal.add(AreaZero.ID);
-        retVal.add(Hayate.ID);
-//        retVal.add(ChickenGame.ID);
+        for(int i=0;i<2;i++) {
+            retVal.add(UpstartGoblin.ID);
+        }
+        retVal.add(Engage.ID);
         return retVal;
     }
 
@@ -252,14 +254,14 @@ public class TheSkyStriker extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_GRAY;
+        return SKY_STRIKER_DEFAULT_COLOR;
     }
 
 
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return SkyStrikerMod.MAGIC;
+        return SkyStrikerMod.SPELL;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -296,14 +298,14 @@ public class TheSkyStriker extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return SkyStrikerMod.MAGIC;
+        return SkyStrikerMod.SPELL;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return SkyStrikerMod.MAGIC;
+        return SkyStrikerMod.SPELL;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects
@@ -333,4 +335,44 @@ public class TheSkyStriker extends CustomPlayer {
         return TEXT[2];
     }
 
+    @Override
+    public void initializeStarterDeck(){
+        super.initializeStarterDeck();
+            List<AbstractCard> cardList = new ArrayList<>();
+            cardList.add(new Kagari());
+            cardList.add(new Kaina());
+            cardList.add(new Hayate());
+            cardList.add(new Shizuku());
+            for(AbstractCard card:cardList) {
+                extraDeckMaster.addToTop(card.makeCopy());
+            }
+        }
+
+
+    @Override
+    public void preBattlePrep(){
+        super.preBattlePrep();
+        extraDeck.clear();
+        for (AbstractCard c : extraDeckMaster.group) {
+            extraDeck.group.add(c.makeSameInstanceOf());
+        }
+    }
+
+    @Override
+    public void applyStartOfTurnPreDrawCards(){
+        super.applyStartOfTurnPreDrawCards();
+        this.canAttack=true;
+        if(this.extraDeck.size()==0){
+            for (AbstractCard c : extraDeckMaster.group) {
+                extraDeck.group.add(c.makeSameInstanceOf());
+            }
+        }
+    }
+    @Override
+    public void applyPreCombatLogic(){
+        super.applyPreCombatLogic();
+        this.canAttack=true;
+    }
+
 }
+

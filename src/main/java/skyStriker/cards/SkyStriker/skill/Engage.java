@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import skyStriker.SkyStrikerMod;
-import skyStriker.actions.tagFromDeckToHandAction;
+import skyStriker.actions.TagFromDeckToHandAction;
 import skyStriker.cards.AbstractDynamicCard;
 import skyStriker.cards.SkyStrikerCardTags;
 import skyStriker.characters.TheSkyStriker;
@@ -40,7 +40,7 @@ public class Engage extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 0;
 
@@ -53,13 +53,13 @@ public class Engage extends AbstractDynamicCard {
     public Engage() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(SkyStriker);
-        this.tags.add(SkyStrikerCardTags.SpellCard);
+        this.tags.add(SkyStrikerCardTags.SSSpellCard);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new tagFromDeckToHandAction(1,SkyStriker,0,cardID,false));;
+        this.addToBot(new TagFromDeckToHandAction(1,SkyStriker,0,cardID,false));;
         if(upgraded) this.addToBot(new DrawCardAction(p, 1));
     }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {

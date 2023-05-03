@@ -17,6 +17,7 @@ import static skyStriker.cards.SkyStrikerCardTags.SkyStriker;
 
 
 public class HayatePower extends AbstractPower implements CloneablePowerInterface {
+    private boolean effectUsed=false;
     public AbstractCreature source;
 
     public static final String POWER_ID = SkyStrikerMod.makeID("HayatePower");
@@ -48,7 +49,10 @@ public class HayatePower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        this.addToBot(new DeckToDiscardPileAction(1,SkyStriker));
+        if(!effectUsed) {
+            this.addToBot(new DeckToDiscardPileAction(1, SkyStriker));
+            effectUsed = true;
+        }
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
@@ -60,5 +64,15 @@ public class HayatePower extends AbstractPower implements CloneablePowerInterfac
     @Override
     public AbstractPower makeCopy() {
         return new HayatePower(owner, amount);
+    }
+    @Override
+    public void atStartOfTurn(){
+        effectUsed=false;
+    }
+    @Override
+    public void atEndOfTurn(boolean isPlayer){
+        if(isPlayer) {
+            effectUsed = false;
+        }
     }
 }

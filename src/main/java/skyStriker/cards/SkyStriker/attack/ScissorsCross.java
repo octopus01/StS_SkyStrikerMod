@@ -16,7 +16,7 @@ import skyStriker.stances.HayateStance;
 import java.util.Objects;
 
 import static skyStriker.SkyStrikerMod.makeCardPath;
-public class ScissorsCross extends AbstractDynamicCard {
+public class ScissorsCross extends SSAbstractAttackCard {
 
     // TEXT DECLARATION
 
@@ -35,7 +35,7 @@ public class ScissorsCross extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheSkyStriker.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheSkyStriker.Enums.SKY_STRIKER_DEFAULT_COLOR;
 
     private static final int COST = 1;
     private static final int DAMAGE = 6;
@@ -47,7 +47,7 @@ public class ScissorsCross extends AbstractDynamicCard {
         baseDamage = DAMAGE;
 
         this.tags.add(SkyStrikerCardTags.SkyStriker);
-        this.tags.add(SkyStrikerCardTags.SpellCard);
+        this.tags.add(SkyStrikerCardTags.SSSpellCard);
         this.isMultiDamage = true;
     }
 
@@ -55,6 +55,8 @@ public class ScissorsCross extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        TheSkyStriker p1 = (TheSkyStriker) p;
+        p1.canAttack=false;
         if(Objects.equals(p.stance.ID, HayateStance.STANCE_ID)) damageTypeForTurn= DamageInfo.DamageType.HP_LOSS;
         for (int i = 0; i < 2; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
@@ -64,21 +66,11 @@ public class ScissorsCross extends AbstractDynamicCard {
     // Upgraded stats.
     @Override
     public void upgrade() {
-
-
-//        String nameplus;
-//        if (i==1) nameplus=name+"+";
-//        else nameplus=name;
         if (!upgraded) {
-//            upgradeName();
-//                i=0;
-
-                baseDamage=11;
+                baseDamage=10;
                 this.upgraded=true;
-//                this.name=nameplus;
                 this.upgradedDamage = true;
                 this.initializeTitle();
-//            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }
@@ -86,7 +78,7 @@ public class ScissorsCross extends AbstractDynamicCard {
     @Override
     public void downgrade(){
         super.downgrade();
-        baseDamage = 6;
+        baseDamage = 8;
         this.upgradedDamage = false;
     }
 }
